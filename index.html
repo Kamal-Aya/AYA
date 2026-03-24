@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Namaz Vakti FIX</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#000000">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<style>
+body{
+margin:0;
+color:white;
+font-family:monospace;
+text-align:center;
+overflow:hidden;
+background:black;
+}
+
+/* immagine sopra 60% */
+body::before{
+content:"";
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:80%;
+background:url("moschea.jpg") no-repeat center/cover;
+z-index:-1;
+}
+/* CLOCK */
+#clock{font-size:80px;color:#00FF00;}
+#prayer{font-size:80px;color:#FFFF00;}
+#countdown{font-size:80px;color:#FF6600;}
+#iqama{font-size:40px;color:#FFD700;}
+
+/* TABELLA */
+#table{
+position:fixed;
+top:500px;
+left:50%;
+transform:translateX(-50%);
+border:2px solid #00FF00;
+padding:20px;
+font-size:35px;
+color: greenyellow;
+background:rgba(0,0,0,0.6);
+}
+/* FOOTER */
+#footer{
+position:fixed;
+bottom:10px;
+width:100%;
+font-size:18px;
+color: white;
+}
+#aya{font-size:12px;
+color: white;
+}
+
+/* LOGO */
+#logo{
+position:fixed;
+bottom:10px;
+right:15px;
+width:80px;
+}
+
+.scroll{
+position:fixed;
+width:100%;
+overflow:hidden;
+font-size:70px;
+font-weight:bold;
+white-space:nowrap;
+}
+
+/* HADITH (verde, lento, sinistra → destra) */
+#hadith span{
+display:inline-block;
+white-space:nowrap;
+color:#00FF00;
+animation:scrollHadith 600s linear infinite;
+}
+
+/* AVVISI (giallo, più veloce, sinistra → destra) */
+#ticker span{
+display:inline-block;
+white-space:nowrap;
+color:#FFD700;
+animation:scrollTicker 300s linear infinite;
+}
+/* 
+#ticker span{
+color:#FFD700;
+animation:scrollTicker 140s linear infinite;
+}*/
+
+/* animazioni separate */
+@keyframes scrollHadith{
+0%{transform:translateX(-100%);}
+100%{transform:translateX(0);}
+}
+
+@keyframes scrollTicker{
+0%{transform:translateX(-100%);}
+100%{transform:translateX(0);}
+}
+
+/* POSIZIONE */
+#hadith{ top:380px; }
+#ticker{ bottom:85px; }
+
+/* OVERLAY */
+#overlay{
+position:fixed;
+top:0;left:0;
+width:100%;height:100%;
+background:black;
+display:none;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+font-size:80px;
+color:#FFD700;
+z-index:9999;
+}
+</style>
+</head>
+
+<body>
+
+<img id="logo" src="Logo.jpg">
+
+<div id="clock"></div>
+<div id="prayer"></div>
+<div id="countdown"></div>
+<div id="iqama"></div>
+
+<div id="table"></div>
+
+<div id="hadith" class="scroll">
+<span id="hadithText"></span>
+</div>
+
+<div id="ticker" class="scroll">
+<span id="tickerText"></span>
+</div>
+<div id="footer">
+Assalam Görlitzer Interkultureller Verein e.V.<br>
+لا تنسونا من دعائكم<br>
+<div id="aya">أبو زكرياء</div>
+</div>
+
+<div id="overlay"></div>
+
+
+<script>
+
+const names={
+Fajr:"الفجر / Fajr",
+Dhuhr:"الظهر / Dhuhr",
+Asr:"العصر / Asr",
+Maghrib:"المغرب / Maghrib",
+Isha:"العشاء / Isha"
+};
+
+const iqamaTimes={Fajr:20,Dhuhr:20,Asr:20,Maghrib:20,Isha:5};
+
+let dataAll=[];
+let todayTimes=null;
+/* up dat count down iqama */
+let currentPrayer = null;
+let adhanTime = null;
+let iqamaTime = null;
+
+/* DATA LOCALE */
+function getToday(){
+const d=new Date();
+return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
+}
+
+/* LOAD JSON */
+fetch("times_2026_gorlitz_FINAL.json")
+.then(r=>r.json())
+.then(d=>{
+dataAll=d;
+updateDay();
+});
+
+/* GIORNO */
+function updateDay(){
+const today=getToday();
+todayTimes = dataAll.find(x => x.Date === today);
+
+if(!todayTimes){
+console.log("NO DATA:",today);
+return;
+}
+
+document.getElementById("table").innerHTML=`
+Fajr: ${todayTimes.Fajr}<br>
+Dhuhr: ${todayTimes.Dhuhr}<br>
+Asr: ${todayTimes.Asr}<br>
+Maghrib: ${todayTimes.Maghrib}<br>
+Isha: ${todayTimes.Isha}
+`;
+}
+
+/* TIME */
+function toDate(t){
+let [h,m]=t.split(":");
+let d=new Date();
+d.setHours(h,m,0);
+return d;
+}
+
+function getNext(){
+let now=new Date();
+let list=["Fajr","Dhuhr","Asr","Maghrib","Isha"];
+
+for(let p of list){
+let t=toDate(todayTimes[p]);
+if(t>now)return{name:p,time:t};
+}
+
+/* dopo Isha → Fajr domani */
+let t=toDate(todayTimes["Fajr"]);
+t.setDate(t.getDate()+1);
+
+return {name:"Fajr", time:t};
+}
+
+function fmt(s){
+let h=Math.floor(s/3600);
+let m=Math.floor((s%3600)/60);
+let sec=s%60;
+return `${h.toString().padStart(2,"0")}:${m.toString().padStart(2,"0")}:${sec.toString().padStart(2,"0")}`;
+}
+
+/* OVERLAY */
+function show(text){
+let o=document.getElementById("overlay");
+o.innerHTML=text;
+o.style.display="flex";
+}
+function hide(){document.getElementById("overlay").style.display="none";}
+
+/* LOOP */
+function update(){
+
+if(!todayTimes)return;
+
+let now=new Date();
+document.getElementById("clock").innerText=now.toLocaleTimeString("de-DE");
+
+let next = getNext();
+if(!next) return;
+
+/* BLOCCA LA SALAT */
+if(!currentPrayer || (iqamaTime && now > new Date(iqamaTime.getTime() + 12*60000))){
+currentPrayer = next.name;
+adhanTime = next.time;
+iqamaTime = new Date(adhanTime.getTime() + iqamaTimes[currentPrayer]*60000);
+}
+
+document.getElementById("prayer").innerText = names[currentPrayer];
+
+let diffAdhan = Math.floor((adhanTime - now)/1000);
+let diffIqama = Math.floor((iqamaTime - now)/1000);
+
+
+
+/* ADHAN 1 MIN */
+// PRIMA ADHAN
+// PRIMA ADHAN
+if(diffAdhan > 0){
+hide();
+document.getElementById("countdown").innerText = fmt(diffAdhan);
+document.getElementById("iqama").innerText = "";
+return;
+}
+
+// ADHAN (1 minuto)
+if(diffAdhan <= 0 && diffAdhan > -60){
+show("الأذان<br>ADHAN");
+return;
+}
+
+// COUNTDOWN IQAMA
+if(diffIqama > 0){
+hide();
+document.getElementById("countdown").innerText = fmt(diffIqama);
+document.getElementById("iqama").innerText = "IQAMA";
+return;
+}
+
+// IQAMA (1 minuto con simbolo)
+if(diffIqama <= 0 && diffIqama > -60){
+show("الإقامة<br>IQAMA<br>📵");
+return;
+}
+
+// SALAT (schermo nero 6 minuti)
+if(diffIqama <= -60 && diffIqama > -420){
+show("&nbsp;");
+return;
+}
+
+// DUA DOPO SALAT (5 minuti)
+if(diffIqama <= -420 && diffIqama > -720){
+show("دعاء بعد الصلاة<br>Bitte Dua machen");
+return;
+}
+
+// RESET
+hide();
+
+}
+
+setInterval(update,1000);
+
+/* HADITH */
+/* const hadithContent =
+"قال رسول الله صلى الله عليه وسلم: الصلاة نور ✦ Das Gebet ist Licht ✦ الصلاة عماد الدين ✦ ";
+
+document.getElementById("hadithText").innerText =
+hadithContent + hadithContent + hadithContent;*/
+/* ===== HADITH DA JSON ===== */
+fetch("hadith.json")
+.then(response => response.json())
+.then(data => {
+
+  // unisci testo
+  let text = data.join(" ✦ ") + " ✦ ";
+
+  // duplicazione continua (NO pause)
+  document.getElementById("hadithText").innerText =
+    text + text + text + text;
+
+})
+.catch(err => {
+  console.log("Errore hadith JSON:", err);
+});
+
+/* ===== AVVISI DA JSON ===== */
+fetch("avvisi.json")
+.then(response => response.json())
+.then(data => {
+
+  // unisci con separatore
+  let text = data.join(" ✦ ") + " ✦ ";
+
+  // duplicazione continua (NO pause)
+  document.getElementById("tickerText").innerText =
+    text + text + text + text;
+
+})
+.catch(err => {
+  console.log("Errore avvisi JSON:", err);
+});
+
+</script>
+
+</body>
+</html>
