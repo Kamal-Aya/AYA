@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aktivitäten - Assalam Görlitzer interkultureller Verein e.V.</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&family=Noto+Naskh+Arabic:wght@400;600;700&family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>.page-content { padding-top: 100px; min-height: 100vh; }</style>
+<base target="_blank">
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/LogoAssalam.jpg" alt="Assalam Logo" class="logo-img">
+                <span>Assalam</span>
+            </a>
+            <div class="lang-selector">
+                <button class="lang-btn" id="langBtn"><i class="fas fa-globe"></i><span class="current-lang">DE</span></button>
+                <div class="lang-dropdown" id="langDropdown">
+                    <button data-lang="de" class="active">Deutsch</button>
+                    <button data-lang="en">English</button>
+                    <button data-lang="ar">العربية</button>
+                    <button data-lang="fa">فارسی</button>
+                </div>
+            </div>
+            <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" data-i18n="nav.home">Startseite</a></li>
+                <li><a href="about.html" data-i18n="nav.about">Über uns</a></li>
+                <li><a href="activities.html" class="active" data-i18n="nav.activities">Aktivitäten</a></li>
+                <li><a href="prayer.html" data-i18n="nav.prayer">Gebetszeiten</a></li>
+                <li><a href="events.html" data-i18n="nav.events">Veranstaltungen</a></li>
+                <li><a href="gallery.html" data-i18n="nav.gallery">Galerie</a></li>
+                <li><a href="contact.html" data-i18n="nav.contact">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="page-content section-padding bg-light">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-i18n="activities.tag">Aktivitäten</span>
+                <h2 data-i18n="activities.title">Unser Angebot</h2>
+                <p class="section-desc" data-i18n="activities.desc">Vielfältige Programme für alle Altersgruppen</p>
+            </div>
+            <div class="activities-grid">
+                <div class="activity-card">
+                    <div class="activity-image"><i class="fas fa-language"></i></div>
+                    <div class="activity-content">
+                        <h3 data-i18n="activities.deutsch.title">Deutschkurse</h3>
+                        <p class="activity-instructor"><i class="fas fa-user-tie"></i> <span data-i18n="activities.deutsch.leader">Leitung: Herr Andreas</span></p>
+                        <p data-i18n="activities.deutsch.text">Deutschlernen für Anfänger und Fortgeschrittene. Praktischer Alltagsdeutsch für Arbeit, Behörden und Integration.</p>
+                        <ul class="activity-details">
+                            <li><i class="fas fa-clock"></i> <span data-i18n="activities.deutsch.time">Mo & Mi, 18:00 - 20:00</span></li>
+                            <li><i class="fas fa-euro-sign"></i> <span data-i18n="activities.deutsch.price">Kostenlos für Mitglieder</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="activity-card">
+                    <div class="activity-image"><i class="fas fa-child"></i></div>
+                    <div class="activity-content">
+                        <h3 data-i18n="activities.arabic.title">Arabisch für Kinder</h3>
+                        <p class="activity-instructor"><i class="fas fa-user-tie"></i> <span data-i18n="activities.arabic.leader">Leitung: Arabisch-Lehrer</span></p>
+                        <p data-i18n="activities.arabic.text">Spielerisches Arabischlernen für Kinder. Lesen, Schreiben und Grundkenntnisse der arabischen Sprache.</p>
+                        <ul class="activity-details">
+                            <li><i class="fas fa-clock"></i> <span data-i18n="activities.arabic.time">Sa, 10:00 - 12:00</span></li>
+                            <li><i class="fas fa-users"></i> <span data-i18n="activities.arabic.age">6-14 Jahre</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="activity-card">
+                    <div class="activity-image visit-bg"><i class="fas fa-door-open"></i></div>
+                    <div class="activity-content">
+                        <h3 data-i18n="activities.visits.title">Besuche & Information</h3>
+                        <p class="activity-instructor"><i class="fas fa-user-tie"></i> <span data-i18n="activities.visits.leader">Für Schulklassen, Vereine & Interessierte</span></p>
+                        <p data-i18n="activities.visits.text">Wir empfangen organisierte Besuche von Schulklassen, anderen Vereinen und allen, die Informationen über unsere Arbeit und den Islam suchen.</p>
+                        <ul class="activity-details">
+                            <li><i class="fas fa-calendar"></i> <span data-i18n="activities.visits.time">Nach Vereinbarung</span></li>
+                            <li><i class="fas fa-users"></i> <span data-i18n="activities.visits.note">Alle willkommen</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="activity-card">
+                    <div class="activity-image"><i class="fas fa-bus"></i></div>
+                    <div class="activity-content">
+                        <h3 data-i18n="activities.trips.title">Kulturelle Ausflüge</h3>
+                        <p class="activity-instructor"><i class="fas fa-user-tie"></i> <span data-i18n="activities.trips.leader">Organisiert vom Verein</span></p>
+                        <p data-i18n="activities.trips.text">Besuche von Museen, historischen Stätten und kulturellen Veranstaltungen in der Region.</p>
+                        <ul class="activity-details">
+                            <li><i class="fas fa-calendar"></i> <span data-i18n="activities.trips.time">Monatlich</span></li>
+                            <li><i class="fas fa-map-marker-alt"></i> <span data-i18n="activities.trips.location">Sachsen & Umgebung</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="activity-card">
+                    <div class="activity-image ramadan-bg"><i class="fas fa-moon"></i></div>
+                    <div class="activity-content">
+                        <h3 data-i18n="activities.iftar.title">Fotor Jama3i (Gemeinschafts-Iftar)</h3>
+                        <p class="activity-instructor"><i class="fas fa-user-tie"></i> <span data-i18n="activities.iftar.leader">Ramadan-Aktivität</span></p>
+                        <p data-i18n="activities.iftar.text">Gemeinschaftliches Fastenbrechen während des Ramadan. Alle sind herzlich eingeladen, gemeinsam zu essen und zu beten.</p>
+                        <ul class="activity-details">
+                            <li><i class="fas fa-clock"></i> <span data-i18n="activities.iftar.time">Während Ramadan, nach Maghrib</span></li>
+                            <li><i class="fas fa-users"></i> <span data-i18n="activities.iftar.note">Alle willkommen</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="index.html" class="footer-logo">
+                        <img src="images/LogoAssalam.jpg" alt="Assalam Logo" class="footer-logo-img">
+                        <span>Assalam</span>
+                    </a>
+                    <p>Assalam Görlitzer interkultureller Verein e.V.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Startseite</a></li>
+                        <li><a href="about.html">Über uns</a></li>
+                        <li><a href="activities.html">Aktivitäten</a></li>
+                        <li><a href="gallery.html">Galerie</a></li>
+                        <li><a href="contact.html">Kontakt</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Assalam Görlitzer interkultureller Verein e.V. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

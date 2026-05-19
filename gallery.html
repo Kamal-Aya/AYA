@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie - Assalam Görlitzer interkultureller Verein e.V.</title>
+    <meta name="description" content="Galerie - Fotos aus unserem Verein">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&family=Noto+Naskh+Arabic:wght@400;600;700&family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gallery-page {
+            padding-top: 100px;
+            min-height: 100vh;
+        }
+        .gallery-grid-large {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+        .gallery-item-large {
+            aspect-ratio: 1;
+            border-radius: 12px;
+            overflow: hidden;
+            background: var(--bg-light);
+            border: 2px dashed var(--border);
+            transition: all 0.3s ease;
+            position: relative;
+            cursor: pointer;
+        }
+        .gallery-item-large:hover {
+            border-color: var(--primary);
+            transform: scale(1.03);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        .gallery-item-large img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .gallery-item-large .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: white;
+            padding: 30px 15px 15px;
+            text-align: center;
+            font-size: 0.9rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .gallery-item-large:hover .gallery-overlay {
+            opacity: 1;
+        }
+        .gallery-placeholder-large {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            gap: 10px;
+        }
+        .gallery-placeholder-large i {
+            font-size: 2.5rem;
+        }
+        .gallery-placeholder-large span {
+            font-size: 0.85rem;
+            text-align: center;
+            padding: 0 10px;
+        }
+        .gallery-filter {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        .filter-btn {
+            padding: 10px 25px;
+            border: 2px solid var(--border);
+            background: white;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            font-family: inherit;
+        }
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .lightbox.active {
+            display: flex;
+        }
+        .lightbox img {
+            max-width: 90%;
+            max-height: 80vh;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+        .lightbox-close {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+        .lightbox-caption {
+            color: white;
+            margin-top: 20px;
+            font-size: 1.1rem;
+        }
+        @media (max-width: 1024px) {
+            .gallery-grid-large { grid-template-columns: repeat(3, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .gallery-grid-large { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 480px) {
+            .gallery-grid-large { grid-template-columns: 1fr; }
+        }
+    </style>
+<base target="_blank">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/LogoAssalam.jpg" alt="Assalam Logo" class="logo-img">
+                <span>Assalam</span>
+            </a>
+            <div class="lang-selector">
+                <button class="lang-btn" id="langBtn"><i class="fas fa-globe"></i><span class="current-lang">DE</span></button>
+                <div class="lang-dropdown" id="langDropdown">
+                    <button data-lang="de" class="active">Deutsch</button>
+                    <button data-lang="en">English</button>
+                    <button data-lang="ar">العربية</button>
+                    <button data-lang="fa">فارسی</button>
+                </div>
+            </div>
+            <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" data-i18n="nav.home">Startseite</a></li>
+                <li><a href="about.html" data-i18n="nav.about">Über uns</a></li>
+                <li><a href="activities.html" data-i18n="nav.activities">Aktivitäten</a></li>
+                <li><a href="prayer.html" data-i18n="nav.prayer">Gebetszeiten</a></li>
+                <li><a href="events.html" data-i18n="nav.events">Veranstaltungen</a></li>
+                <li><a href="gallery.html" class="active" data-i18n="nav.gallery">Galerie</a></li>
+                <li><a href="contact.html" data-i18n="nav.contact">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Gallery Section -->
+    <section class="gallery-page section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-i18n="gallery.tag">Galerie</span>
+                <h2 data-i18n="gallery.title">Eindrücke aus unserem Verein</h2>
+                <p class="section-desc">Momente, Erinnerungen und Gemeinschaft</p>
+            </div>
+
+            <div class="gallery-filter">
+                <button class="filter-btn active" data-filter="all">Alle</button>
+                <button class="filter-btn" data-filter="gebete">Gebete</button>
+                <button class="filter-btn" data-filter="aktivitaeten">Aktivitäten</button>
+                <button class="filter-btn" data-filter="ausfluege">Ausflüge</button>
+                <button class="filter-btn" data-filter="events">Events</button>
+                <button class="filter-btn" data-filter="ramadan">Ramadan</button>
+            </div>
+<div class="gallery-grid-large" id="galleryGrid"></div>
+                   </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <button class="lightbox-close" onclick="closeLightbox()"><i class="fas fa-times"></i></button>
+        <img src="" alt="" id="lightboxImg">
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="index.html" class="footer-logo">
+                        <img src="images/LogoAssalam.jpg" alt="Assalam Logo" class="footer-logo-img">
+                        <span>Assalam</span>
+                    </a>
+                    <p>Assalam Görlitzer interkultureller Verein e.V.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Startseite</a></li>
+                        <li><a href="about.html">Über uns</a></li>
+                        <li><a href="activities.html">Aktivitäten</a></li>
+                        <li><a href="gallery.html">Galerie</a></li>
+                        <li><a href="contact.html">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Rechtliches</h4>
+                    <ul>
+                        <li><a href="#">Impressum</a></li>
+                        <li><a href="#">Datenschutz</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Assalam Görlitzer interkultureller Verein e.V. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/gallery-data.js"></script>
+    <script>
+        // Gallery Filter
+    const galleryGrid = document.getElementById('galleryGrid');
+
+    function renderGallery(filter = 'all') {
+
+        galleryGrid.innerHTML = '';
+
+        galleryData.forEach(item => {
+
+            if (filter === 'all' || item.category === filter) {
+
+                const div = document.createElement('div');
+
+                div.className = 'gallery-item-large';
+
+                div.innerHTML = `
+                    <img src="${item.src}" alt="${item.title}" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <span>${item.title}</span>
+                    </div>
+                `;
+
+                div.onclick = () => openLightbox(div);
+
+                galleryGrid.appendChild(div);
+            }
+        });
+    }
+
+    renderGallery();
+
+    // FILTER
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+
+        btn.addEventListener('click', function() {
+
+            document.querySelectorAll('.filter-btn')
+                .forEach(b => b.classList.remove('active'));
+
+            this.classList.add('active');
+
+            renderGallery(this.dataset.filter);
+        });
+    });
+
+    // LIGHTBOX
+    function openLightbox(element) {
+
+        const img = element.querySelector('img');
+
+        const caption = element.querySelector('.gallery-overlay span').textContent;
+
+        document.getElementById('lightboxImg').src = img.src;
+
+        document.getElementById('lightboxCaption').textContent = caption;
+
+        document.getElementById('lightbox').classList.add('active');
+    }
+
+    function closeLightbox() {
+
+        document.getElementById('lightbox')
+            .classList.remove('active');
+    }
+
+    document.addEventListener('keydown', function(e) {
+
+        if (e.key === 'Escape') {
+
+            closeLightbox();
+        }
+    });  
+    </script>
+</body>
+</html>

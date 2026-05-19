@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - Assalam Görlitzer interkultureller Verein e.V.</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&family=Noto+Naskh+Arabic:wght@400;600;700&family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>.page-content { padding-top: 100px; min-height: 100vh; }</style>
+<base target="_blank">
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/LogoAssalam.jpg" alt="Assalam Logo" class="logo-img">
+                <span>Assalam</span>
+            </a>
+            <div class="lang-selector">
+                <button class="lang-btn" id="langBtn"><i class="fas fa-globe"></i><span class="current-lang">DE</span></button>
+                <div class="lang-dropdown" id="langDropdown">
+                    <button data-lang="de" class="active">Deutsch</button>
+                    <button data-lang="en">English</button>
+                    <button data-lang="ar">العربية</button>
+                    <button data-lang="fa">فارسی</button>
+                </div>
+            </div>
+            <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" data-i18n="nav.home">Startseite</a></li>
+                <li><a href="about.html" data-i18n="nav.about">Über uns</a></li>
+                <li><a href="activities.html" data-i18n="nav.activities">Aktivitäten</a></li>
+                <li><a href="prayer.html" data-i18n="nav.prayer">Gebetszeiten</a></li>
+                <li><a href="events.html" data-i18n="nav.events">Veranstaltungen</a></li>
+                <li><a href="gallery.html" data-i18n="nav.gallery">Galerie</a></li>
+                <li><a href="contact.html" class="active" data-i18n="nav.contact">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="page-content section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-i18n="contact.tag">Kontakt</span>
+                <h2 data-i18n="contact.title">Kontaktieren Sie uns</h2>
+                <p class="section-desc" data-i18n="contact.desc">Wir freuen uns auf Ihre Nachricht</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info" id="contactInfo">
+                    <!-- Loaded from contact-info.json -->
+                </div>
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name" data-i18n="contact.form.name">Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" data-i18n="contact.form.email">E-Mail *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject" data-i18n="contact.form.subject">Betreff</label>
+                            <select id="subject" name="subject">
+                                <option value="allgemein" data-i18n="contact.form.subjects.general">Allgemeine Anfrage</option>
+                                <option value="mitgliedschaft" data-i18n="contact.form.subjects.membership">Mitgliedschaft</option>
+                                <option value="deutschkurs" data-i18n="contact.form.subjects.german">Deutschkurs</option>
+                                <option value="arabisch" data-i18n="contact.form.subjects.arabic">Arabisch für Kinder</option>
+                                <option value="verwaltung" data-i18n="contact.form.subjects.admin">Verwaltungshilfe</option>
+                                <option value="besuch" data-i18n="contact.form.subjects.visit">Besuch anmelden</option>
+                                <option value="spende" data-i18n="contact.form.subjects.donation">Spende</option>
+                                <option value="andere" data-i18n="contact.form.subjects.other">Andere</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" data-i18n="contact.form.message">Nachricht *</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <i class="fas fa-paper-plane"></i> <span data-i18n="contact.form.submit">Nachricht senden</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="index.html" class="footer-logo">
+                        <img src="images/LogoAssalam.jpg" alt="Assalam Logo" class="footer-logo-img">
+                        <span>Assalam</span>
+                    </a>
+                    <p>Assalam Görlitzer interkultureller Verein e.V.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Startseite</a></li>
+                        <li><a href="about.html">Über uns</a></li>
+                        <li><a href="activities.html">Aktivitäten</a></li>
+                        <li><a href="gallery.html">Galerie</a></li>
+                        <li><a href="contact.html">Kontakt</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Assalam Görlitzer interkultureller Verein e.V. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
