@@ -1,0 +1,161 @@
+{
+  "gebete": [
+    {
+      "file": "jumua.jpg",
+      "title_de": "Jumu'a Gebet",
+      "title_en": "Friday Prayer",
+      "title_ar": "صلاة الجمعة",
+      "title_fa": "نماز جمعه"
+    },
+    {
+      "file": "tarawih.jpg",
+      "title_de": "Tarawih Gebet",
+      "title_en": "Tarawih Prayer",
+      "title_ar": "صلاة التراويح",
+      "title_fa": "نماز تراویح"
+    },
+    {
+      "file": "eid-al-fitr.jpg",
+      "title_de": "Eid al-Fitr Gebet",
+      "title_en": "Eid al-Fitr Prayer",
+      "title_ar": "صلاة عيد الفطر",
+      "title_fa": "نماز عید فطر"
+    },
+    {
+      "file": "eid-al-adha.jpg",
+      "title_de": "Eid al-Adha Gebet",
+      "title_en": "Eid al-Adha Prayer",
+      "title_ar": "صلاة عيد الأضحى",
+      "title_fa": "نماز عید قربان"
+    }
+  ],
+  "aktivitaeten": [
+    {
+      "file": "deutschkurs.jpg",
+      "title_de": "Deutschkurs",
+      "title_en": "German Course",
+      "title_ar": "دورة الألمانية",
+      "title_fa": "کلاس آلمانی"
+    },
+    {
+      "file": "arabisch-kinder.jpg",
+      "title_de": "Arabisch für Kinder",
+      "title_en": "Arabic for Kids",
+      "title_ar": "العربية للأطفال",
+      "title_fa": "عربی برای کودکان"
+    },
+    {
+      "file": "integrationskurs.jpg",
+      "title_de": "Integrationskurs",
+      "title_en": "Integration Course",
+      "title_ar": "دورة الاندماج",
+      "title_fa": "دوره ادغام"
+    }
+  ],
+  "ausfluege": [
+    {
+      "file": "dresden.jpg",
+      "title_de": "Ausflug Dresden",
+      "title_en": "Dresden Trip",
+      "title_ar": "رحلة دريسدن",
+      "title_fa": "سفر درسدن"
+    },
+    {
+      "file": "berlin.jpg",
+      "title_de": "Berlin Trip",
+      "title_en": "Berlin Trip",
+      "title_ar": "رحلة برلين",
+      "title_fa": "سفر برلین"
+    },
+    {
+      "file": "museumsbesuch.jpg",
+      "title_de": "Museumsbesuch",
+      "title_en": "Museum Visit",
+      "title_ar": "زيارة المتحف",
+      "title_fa": "بازدید موزه"
+    }
+  ],
+  "events": [
+    {
+      "file": "tag-der-offenen-tuer.jpg",
+      "title_de": "Tag der offenen Tür",
+      "title_en": "Open Day",
+      "title_ar": "يوم الباب المفتوح",
+      "title_fa": "روز درهای باز"
+    },
+    {
+      "file": "eid-feier.jpg",
+      "title_de": "Eid Feier",
+      "title_en": "Eid Celebration",
+      "title_ar": "احتفال العيد",
+      "title_fa": "جشن عید"
+    },
+    {
+      "file": "herbstfest.jpg",
+      "title_de": "Herbstfest",
+      "title_en": "Autumn Festival",
+      "title_ar": "مهرجان الخريف",
+      "title_fa": "جشن پاییز"
+    }
+  ],
+  "ramadan": [
+    {
+      "file": "iftar-gemeinschaft.jpg",
+      "title_de": "Iftar Gemeinschaft",
+      "title_en": "Iftar Community",
+      "title_ar": "إفتر جماعي",
+      "title_fa": "افطاری جمعی"
+    },
+    {
+      "file": "iftar-tisch.jpg",
+      "title_de": "Iftar Tisch",
+      "title_en": "Iftar Table",
+      "title_ar": "مائدة الإفطار",
+      "title_fa": "سفره افطار"
+    },
+    {
+      "file": "ramadan-dekoration.jpg",
+      "title_de": "Ramadan Dekoration",
+      "title_en": "Ramadan Decoration",
+      "title_ar": "زينة رمضان",
+      "title_fa": "تزیینات رمضان"
+    },
+    {
+      "file": "suhur-gemeinschaft.jpg",
+      "title_de": "Suhur Gemeinschaft",
+      "title_en": "Suhur Community",
+      "title_ar": "سحور جماعي",
+      "title_fa": "سحری جمعی"
+    },
+    {
+      "file": "quran-lesung.jpg",
+      "title_de": "Quran Lesung",
+      "title_en": "Quran Reading",
+      "title_ar": "قراءة القرآن",
+      "title_fa": "قرائت قرآن"
+    },
+    {
+      "file": "laylat-al-qadr.jpg",
+      "title_de": "Laylat al-Qadr",
+      "title_en": "Laylat al-Qadr",
+      "title_ar": "ليلة القدر",
+      "title_fa": "شب قدر"
+    }
+  ],
+  "allgemein": [
+    {
+      "file": "vorstand.jpg",
+      "title_de": "Vorstand",
+      "title_en": "Board",
+      "title_ar": "مجلس الإدارة",
+      "title_fa": "هیئت مدیره"
+    },
+    {
+      "file": "gemeinde.jpg",
+      "title_de": "Gemeinde",
+      "title_en": "Community",
+      "title_ar": "المجتمع",
+      "title_fa": "جامعه"
+    }
+  ]
+}

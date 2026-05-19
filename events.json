@@ -1,0 +1,135 @@
+{
+  "events": [
+    {
+      "id": "event1",
+      "day": "27",
+      "month": "MAY",
+      "month_de": "MAI",
+      "month_en": "MAY",
+      "month_ar": "مايو",
+      "month_fa": "مه",
+      "title": {
+        "de": "Eid al-Adha Gebet",
+        "en": "Eid al-Adha Prayer",
+        "ar": "صلاة عيد الأضحى",
+        "fa": "نماز عید قربان"
+      },
+      "location": {
+        "de": "Moschee Görlitz",
+        "en": "Mosque Görlitz",
+        "ar": "مسجد غورليتز",
+        "fa": "مسجد گورلیتز"
+      },
+      "text": {
+        "de": "Das erste Eid-Gebet beginnt um 06:00 Uhr, das zweite um 07:00 Uhr am Mittwoch, den 27. Mai 2026.",
+        "en": "The first Eid prayer starts at 6:00 AM and the second at 7:00 AM on Wednesday, 27 May 2026.",
+        "ar": "تبدأ صلاة العيد الأولى الساعة 06:00 والثانية الساعة 07:00 يوم الأربعاء 27 مايو 2026.",
+        "fa": "اولین نماز عید ساعت 06:00 و دومین نماز ساعت 07:00 در روز چهارشنبه 27 مه 2026 برگزار می‌شود."
+      },
+      "tag": {
+        "de": "Religiös",
+        "en": "Religious",
+        "ar": "ديني",
+        "fa": "مذهبی"
+      }
+    },
+    {
+      "id": "event2",
+      "day": "EVERY",
+      "month": "THU",
+      "month_de": "DON",
+      "month_en": "THU",
+      "month_ar": "الخميس",
+      "month_fa": "پنجشنبه",
+      "title": {
+        "de": "Deutschkurs mit Herr Andreas",
+        "en": "German Course with Mr. Andreas",
+        "ar": "دورة اللغة الألمانية مع السيد أندرياس",
+        "fa": "کلاس زبان آلمانی با آقای آندریاس"
+      },
+      "location": {
+        "de": "Vereinsräume Görlitz",
+        "en": "Association Rooms Görlitz",
+        "ar": "مقر الجمعية غورليتز",
+        "fa": "مقر انجمن گورلیتز"
+      },
+      "text": {
+        "de": "Der Deutschkurs mit Herr Andreas findet jeden Donnerstag nach dem Maghreb-Gebet statt.",
+        "en": "The German course with Mr. Andreas takes place every Thursday after Maghreb prayer.",
+        "ar": "تقام دورة اللغة الألمانية مع السيد أندرياس كل يوم خميس بعد صلاة المغرب.",
+        "fa": "کلاس زبان آلمانی با آقای آندریاس هر پنجشنبه بعد از نماز مغرب برگزار می‌شود."
+      },
+      "tag": {
+        "de": "Bildung",
+        "en": "Education",
+        "ar": "تعليم",
+        "fa": "آموزشی"
+      }
+    },
+    {
+      "id": "event3",
+      "day": "DAILY",
+      "month": "ALL",
+      "month_de": "TÄGLICH",
+      "month_en": "DAILY",
+      "month_ar": "يوميًا",
+      "month_fa": "روزانه",
+      "title": {
+        "de": "Quranlesung",
+        "en": "Quran Reading",
+        "ar": "قراءة القرآن",
+        "fa": "قرائت قرآن"
+      },
+      "location": {
+        "de": "Moschee Görlitz",
+        "en": "Mosque Görlitz",
+        "ar": "مسجد غورليتز",
+        "fa": "مسجد گورلیتز"
+      },
+      "text": {
+        "de": "Tägliche Quranlesung zwischen dem Maghreb- und Isha-Gebet.",
+        "en": "Daily Quran reading between Maghreb and Isha prayers.",
+        "ar": "قراءة يومية للقرآن بين صلاتي المغرب والعشاء.",
+        "fa": "قرائت روزانه قرآن بین نماز مغرب و عشاء برگزار می‌شود."
+      },
+      "tag": {
+        "de": "Religiös",
+        "en": "Religious",
+        "ar": "ديني",
+        "fa": "مذهبی"
+      }
+    },
+     {
+    "id": "event4",
+  "day": "EVERY",
+  "month": "WED",
+  "month_de": "MIT",
+  "month_en": "WED",
+  "month_ar": "الأربعاء",
+  "month_fa": "چهارشنبه",
+  "title": {
+    "de": "Frauentreff in Rāprica",
+    "en": "Women's Meeting in Rāprica",
+    "ar": "لقاء النساء في رابريكا",
+    "fa": "دیدار بانوان در راپریکا"
+  },
+  "location": {
+    "de": "Rāprica",
+    "en": "Rāprica",
+    "ar": "رابريكا",
+    "fa": "راپریکا"
+  },
+  "text": {
+    "de": "Frauentreffen jeden Mittwoch um 17:00 Uhr an wechselnden Orten in Rāprica.",
+    "en": "Women's meeting every Wednesday at 5:00 PM in different places in Rāprica.",
+    "ar": "لقاء النساء كل يوم أربعاء الساعة 17:00 في أماكن مختلفة في رابريكا.",
+    "fa": "دیدار بانوان هر چهارشنبه ساعت 17:00 در مکان‌های مختلف راپریکا برگزار می‌شود."
+  },
+  "tag": {
+    "de": "Frauen",
+    "en": "Women",
+    "ar": "نساء",
+    "fa": "بانوان"
+  } } 
+  ]
+}

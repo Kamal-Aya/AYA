@@ -1,0 +1,42 @@
+{
+  "phones": [
+    {
+      "label": "Telefon",
+      "number": "+49 555 XXX XXX",
+      "href": "tel:+49555XXXXXX",
+      "note": "MODIFICA QUI: Cambia il numero di telefono principale"
+    },
+    {
+      "label": "Telefon 2",
+      "number": "+49 552 644 XXX",
+      "href": "tel:+49552644XXX",
+      "note": "MODIFICA QUI: Cambia il secondo numero di telefono"
+    }
+  ],
+  "email": {
+    "address": "assalam.verein@web.de",
+    "href": "mailto:assalam.verein@web.de",
+    "note": "MODIFICA QUI: Cambia l'indirizzo email"
+  },
+  "address": {
+    "name": "Assalam Görlitzer interkultureller Verein e.V.",
+    "street": "Bahnhofstraße 12",
+    "city": "02826 Görlitz, Sachsen",
+    "note": "MODIFICA QUI: Cambia l'indirizzo se necessario"
+  },
+  "donation": {
+    "iban": "DE36850501000232059543",
+    "bic": "XXXXXXXXXXX",
+    "bank": "Sparkasse",
+    "account_holder": "Assalam Görlitzer interkultureller Verein e.V.",
+    "note": "MODIFICA QUI: Inserisci IBAN, BIC e nome banca corretti"
+  },
+
+  "opening_hours": {
+    "de": "Täglich zwischen Maghrib- und Isha-Gebet\nAndere Zeiten: nach Vereinbarung",
+    "en": "Every day between Maghrib and Isha prayer\nOther times: by appointment",
+    "ar": "كل يوم بين صلاتي المغرب والعشاء\nأوقات أخرى: حسب الموعد",
+    "fa": "هر روز بین نماز مغرب و عشاء\nساعات دیگر: با هماهنگی قبلی"
+  }
+
+}

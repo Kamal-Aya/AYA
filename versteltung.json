@@ -1,0 +1,76 @@
+{
+  "versteltung": {
+    "enabled": true,
+    "title": {
+      "de": "Verwaltungshilfe & Integration",
+      "en": "Administrative Help & Integration",
+      "ar": "المساعدة الإدارية والاندماج",
+      "fa": "کمک اداری و یکپارچگی"
+    },
+    "description": {
+      "de": "Wir helfen Ihnen bei der Bearbeitung von Formularen, dem Verstehen von Briefen und der Integration in Deutschland.",
+      "en": "We help you with filling out forms, understanding letters and integration in Germany.",
+      "ar": "نساعدك في ملء الاستمارات، وفهم الرسائل، والاندماج في ألمانيا.",
+      "fa": "ما در پر کردن فرم‌ها، درک نامه‌ها و یکپارچگی در آلمان به شما کمک می‌کنیم."
+    },
+    "services": [
+      {
+        "icon": "fa-file-alt",
+        "title": {
+          "de": "Formulare ausfüllen",
+          "en": "Filling out forms",
+          "ar": "ملء الاستمارات",
+          "fa": "پر کردن فرم‌ها"
+        },
+        "description": {
+          "de": "Hilfe beim Ausfüllen von Anträgen, Behördenformularen und offiziellen Dokumenten.",
+          "en": "Help with filling out applications, authority forms and official documents.",
+          "ar": "مساعدة في ملء الطلبات واستمارات السلطات والوثائق الرسمية.",
+          "fa": "کمک در پر کردن درخواست‌ها، فرم‌های اداری و اسناد رسمی."
+        }
+      },
+      {
+        "icon": "fa-envelope-open-text",
+        "title": {
+          "de": "Briefe verstehen",
+          "en": "Understanding letters",
+          "ar": "فهم الرسائل",
+          "fa": "درک نامه‌ها"
+        },
+        "description": {
+          "de": "Wir erklären Ihnen Briefe von Behörden, Versicherungen und anderen Institutionen.",
+          "en": "We explain letters from authorities, insurance companies and other institutions.",
+          "ar": "نشرح لك الرسائل من السلطات وشركات التأمين والمؤسسات الأخرى.",
+          "fa": "ما نامه‌های ادارات، شرکت‌های بیمه و سایر نهادها را برای شما توضیح می‌دهیم."
+        }
+      },
+      {
+        "icon": "fa-info-circle",
+        "title": {
+          "de": "Integrationsberatung",
+          "en": "Integration counseling",
+          "ar": "الاستشارة الاندماجية",
+          "fa": "مشاوره یکپارچگی"
+        },
+        "description": {
+          "de": "Informationen und Beratung für eine erfolgreiche Integration in die deutsche Gesellschaft.",
+          "en": "Information and counseling for successful integration into German society.",
+          "ar": "معلومات واستشارة لاندماج ناجح في المجتمع الألماني.",
+          "fa": "اطلاعات و مشاوره برای یکپارچگی موفق در جامعه آلمان."
+        }
+      }
+    ],
+    "schedule": {
+      "de": "Nach Vereinbarung",
+      "en": "By appointment",
+      "ar": "حسب الموعد",
+      "fa": "با قرار قبلی"
+    },
+    "contact": {
+      "de": "Kontaktieren Sie uns für einen Termin",
+      "en": "Contact us for an appointment",
+      "ar": "اتصل بنا لتحديد موعد",
+      "fa": "با ما تماس بگیرید برای قرار ملاقات"
+    }
+  }
+}
