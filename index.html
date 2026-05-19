@@ -1,367 +1,343 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<title>Namaz Vakti FIX</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#000000">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-capable" content="yes">
-
-<style>
-body{
-margin:0;
-color:white;
-font-family:monospace;
-text-align:center;
-overflow:hidden;
-background:black;
-}
-
-/* immagine sopra 60% */
-body::before{
-content:"";
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:80%;
-background:url("Moschea.jpg") no-repeat center/cover;
-z-index:-1;
-}
-/* CLOCK */
-#clock{font-size:80px;color:#00FF00;}
-#prayer{font-size:80px;color:#FFFF00;}
-#countdown{font-size:80px;color:white;}
-#iqama{font-size:40px;color:#FFD700;}
-
-/* TABELLA */
-#table{
-position:fixed;
-top:500px;
-left:50%;
-transform:translateX(-50%);
-border:2px solid #00FF00;
-padding:20px;
-font-size:35px;
-color: greenyellow;
-background:rgba(0,0,0,0.6);
-}
-/* FOOTER */
-#footer{
-position:fixed;
-bottom:10px;
-width:100%;
-font-size:22px;
-color: white;
-}
-#aya{font-size:5px;
-color: white;
-}
-
-/* LOGO */
-#logo{
-position:fixed;
-bottom:10px;
-right:15px;
-width:80px;
-}
-
-.scroll{
-position:fixed;
-width:100%;
-overflow:hidden;
-font-size:70px;
-font-weight:bold;
-white-space:nowrap;
-}
-
-/* HADITH (verde, lento, sinistra → destra) */
-#hadith span{
-display:inline-block;
-white-space:nowrap;
-color:#00FF00;
-animation:scrollHadith 900s linear infinite;
-}
-
-/* AVVISI (giallo, più veloce, sinistra → destra) */
-#ticker span{
-display:inline-block;
-white-space:nowrap;
-color:#FFD700;
-animation:scrollTicker 600s linear infinite;
-}
-/* 
-#ticker span{
-color:#FFD700;
-animation:scrollTicker 140s linear infinite;
-}*/
-
-/* animazioni separate */
-@keyframes scrollHadith{
-0%{transform:translateX(-100%);}
-100%{transform:translateX(0);}
-}
-
-@keyframes scrollTicker{
-0%{transform:translateX(-100%);}
-100%{transform:translateX(0);}
-}
-
-/* POSIZIONE */
-#hadith{ top:380px; }
-#ticker{ bottom:85px; }
-
-/* OVERLAY */
-#overlay{
-position:fixed;
-top:0;left:0;
-width:100%;height:100%;
-background:black;
-display:none;
-justify-content:center;
-align-items:center;
-flex-direction:column;
-font-size:80px;
-color:#FFD700;
-z-index:9999;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assalam Görlitzer interkultureller Verein e.V.</title>
+    <meta name="description" content="Assalam Görlitzer interkultureller Verein e.V. - Interkulturelle Begegnung, Islamische Gemeinschaft, Sprachkurse, Kulturveranstaltungen">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&family=Noto+Naskh+Arabic:wght@400;600;700&family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<base target="_blank">
 </head>
-
 <body>
 
-<img id="logo" src="Logo.jpg">
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/LogoAssalam.jpg" alt="Assalam Logo" class="logo-img">
+                <span>Assalam</span>
+            </a>
 
-<div id="clock"></div>
-<div id="prayer"></div>
-<div id="countdown"></div>
-<div id="iqama"></div>
+            <!-- Language Selector -->
+            <div class="lang-selector">
+                <button class="lang-btn" id="langBtn" aria-label="Sprache wählen">
+                    <i class="fas fa-globe"></i>
+                    <span class="current-lang">DE</span>
+                </button>
+                <div class="lang-dropdown" id="langDropdown">
+                    <button data-lang="de" class="active">Deutsch</button>
+                    <button data-lang="en">English</button>
+                    <button data-lang="ar">العربية</button>
+                    <button data-lang="fa">فارسی</button>
+                </div>
+            </div>
 
-<div id="table"></div>
+            <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="active" data-i18n="nav.home">Startseite</a></li>
+                <li><a href="about.html" data-i18n="nav.about">Über uns</a></li>
+                <li><a href="activities.html" data-i18n="nav.activities">Aktivitäten</a></li>
+                <li><a href="prayer.html" data-i18n="nav.prayer">Gebetszeiten</a></li>
+                <li><a href="events.html" data-i18n="nav.events">Veranstaltungen</a></li>
+                <li><a href="gallery.html" data-i18n="nav.gallery">Galerie</a></li>
+                <li><a href="contact.html" data-i18n="nav.contact">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
 
-<div id="hadith" class="scroll">
-<span id="hadithText"></span>
-</div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 data-i18n="hero.title">Assalam Görlitzer interkultureller Verein e.V.</h1>
+                <p class="hero-subtitle" data-i18n="hero.subtitle">Gemeinschaft · Kultur · Glaube · Integration</p>
+                <p class="hero-description" data-i18n="hero.description">
+                    Ein Ort der Begegnung in Görlitz. Wir fördern den interkulturellen Dialog, 
+                    bieten islamische Gebetsräume und unterstützen die Integration durch Bildung und Kultur.
+                </p>
+                <div class="hero-buttons">
+                    <a href="activities.html" class="btn btn-primary" data-i18n="hero.btn1">Unsere Aktivitäten</a>
+                    <a href="contact.html" class="btn btn-secondary" data-i18n="hero.btn2">Kontaktieren Sie uns</a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
 
-<div id="ticker" class="scroll">
-<span id="tickerText"></span>
-</div>
-<div id="footer">
-Assalam Görlitzer Interkultureller Verein e.V.<br>
-لا تنسونا من دعائكم<br>
-<div id="aya">أبو زكرياء</div>
-</div>
+    <!-- About Preview -->
+    <section class="about section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-i18n="about.tag">Über uns</span>
+                <h2 data-i18n="about.title">Willkommen bei Assalam</h2>
+                <p class="section-desc" data-i18n="about.desc">Gemeinsam für eine offene und vielfältige Gesellschaft</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="about-icon"><i class="fas fa-heart"></i></div>
+                    <h3 data-i18n="about.mission.title">Unsere Mission</h3>
+                    <p data-i18n="about.mission.text">Wir schaffen einen Raum für Begegnung, Dialog und gegenseitiges Verständnis...</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon"><i class="fas fa-praying-hands"></i></div>
+                    <h3 data-i18n="about.islam.title">Islamische Gemeinschaft</h3>
+                    <p data-i18n="about.islam.text">Tägliche Gebete, Jumu'a und islamische Unterweisung...</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon"><i class="fas fa-users"></i></div>
+                    <h3 data-i18n="about.dialog.title">Interkultureller Dialog</h3>
+                    <p data-i18n="about.dialog.text">Wir öffnen uns für alle Menschen – unabhängig von Herkunft...</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h3 data-i18n="about.education.title">Bildung & Integration</h3>
+                    <p data-i18n="about.education.text">Sprachkurse, Nachhilfe und kulturelle Bildung...</p>
+                </div>
+            </div>
+            <div style="text-align:center; margin-top:40px;">
+                <a href="about.html" class="btn btn-primary" data-i18n="hero.btn2">Mehr erfahren</a>
+            </div>
+        </div>
+    </section>
 
-<div id="overlay"></div>
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="150">0</span>
+                    <span class="stat-label" data-i18n="stats.members">Mitglieder</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="12">0</span>
+                    <span class="stat-label" data-i18n="stats.years">Jahre Erfahrung</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="8">0</span>
+                    <span class="stat-label" data-i18n="stats.activities">Aktivitäten pro Woche</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="500">0</span>
+                    <span class="stat-label" data-i18n="stats.visitors">Besucher pro Jahr</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Activities Preview -->
+    <section class="activities section-padding bg-light">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-i18n="activities.tag">Aktivitäten</span>
+                <h2 data-i18n="activities.title">Unser Angebot</h2>
+                <p class="section-desc" data-i18n="activities.desc">Vielfältige Programme für alle Altersgruppen</p>
+            </div>
+            <div class="activities-grid">
+                <div class="activity-card">
+                    <div class="activity-image"><i class="fas fa-language"></i></div>
+                    <div class="activity-content">
+                        <h3 data-i18n="activities.deutsch.title">Deutschkurse</h3>
+                        <p data-i18n="activities.deutsch.text">Deutschlernen für Anfänger und Fortgeschrittene...</p>
+                    </div>
+                </div>
+                <div class="activity-card">
+                    <div class="activity-image"><i class="fas fa-child"></i></div>
+                    <div class="activity-content">
+                        <h3 data-i18n="activities.arabic.title">Arabisch für Kinder</h3>
+                        <p data-i18n="activities.arabic.text">Spielerisches Arabischlernen für Kinder...</p>
+                    </div>
+                </div>
+                <div class="activity-card">
+                    <div class="activity-image"><i class="fas fa-bus"></i></div>
+                    <div class="activity-content">
+                        <h3 data-i18n="activities.trips.title">Kulturelle Ausflüge</h3>
+                        <p data-i18n="activities.trips.text">Besuche von Museen, historischen Stätten...</p>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align:center; margin-top:40px;">
+                <a href="activities.html" class="btn btn-primary" data-i18n="hero.btn1">Alle Aktivitäten</a>
+            </div>
+        </div>
+    </section>
 
-<script>
+    <!-- Prayer Preview -->
+    <section class="prayer section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-i18n="prayer.tag">Gebetszeiten</span>
+                <h2 data-i18n="prayer.title">Gebetszeiten & Jumu'a</h2>
+                <p class="section-desc" data-i18n="prayer.desc">Tägliche Gebete und Freitagsgebet in unserem Gebetsraum</p>
+            </div>
+            <div class="prayer-container">
+                <div class="prayer-times-card">
+                    <div class="prayer-header">
+                        <h3><i class="fas fa-mosque"></i> <span data-i18n="prayer.daily.title">Tägliche Gebetszeiten</span></h3>
+                        <div class="hijri-date" id="hijriDate">--</div>
+                    </div>
+                    <div class="prayer-times-list">
+                        <div class="prayer-time-item" data-prayer="fajr">
+                            <span class="prayer-name">Fajr</span>
+                            <span class="prayer-time" id="fajr">--:--</span>
+                        </div>
+                        <div class="prayer-time-item" data-prayer="duhr">
+                            <span class="prayer-name">Duhr</span>
+                            <span class="prayer-time" id="duhr">--:--</span>
+                        </div>
+                        <div class="prayer-time-item" data-prayer="asr">
+                            <span class="prayer-name">Asr</span>
+                            <span class="prayer-time" id="asr">--:--</span>
+                        </div>
+                        <div class="prayer-time-item" data-prayer="maghrib">
+                            <span class="prayer-name">Maghrib</span>
+                            <span class="prayer-time" id="maghrib">--:--</span>
+                        </div>
+                        <div class="prayer-time-item" data-prayer="isha">
+                            <span class="prayer-name">Isha</span>
+                            <span class="prayer-time" id="isha">--:--</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="jumuah-card">
+                    <div class="jumuah-content">
+                        <h3><i class="fas fa-users"></i> <span data-i18n="prayer.jumuah.title">Jumu'a - Freitagsgebet</span></h3>
+                        <div class="jumuah-details">
+                            <div class="jumuah-item">
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <span class="label" data-i18n="prayer.jumuah.time_label">Gebet</span>
+                                    <span class="value">14:00 Uhr</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align:center; margin-top:40px;">
+                <a href="prayer.html" class="btn btn-primary" data-i18n="prayer.tag">Alle Gebetszeiten</a>
+            </div>
+        </div>
+    </section>
 
-const names={
-Fajr:"الفجر / Fajr",
-Dhuhr:"الظهر / Dhuhr",
-Asr:"العصر / Asr",
-Maghrib:"المغرب / Maghrib",
-Isha:"العشاء / Isha"
-};
+    <!-- Events Preview -->
+    <section class="events section-padding bg-light">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-i18n="events.tag">Veranstaltungen</span>
+                <h2 data-i18n="events.title">Kommende Events</h2>
+                <p class="section-desc" data-i18n="events.desc">Messen, Ausstellungen und kulturelle Highlights</p>
+            </div>
+            <div class="events-timeline" id="eventsContainer">
+                <!-- Events injected by JS -->
+            </div>
+            <div style="text-align:center; margin-top:40px;">
+                <a href="events.html" class="btn btn-primary" data-i18n="events.tag">Alle Veranstaltungen</a>
+            </div>
+        </div>
+    </section>
 
-const iqamaTimes={Fajr:20,Dhuhr:20,Asr:20,Maghrib:20,Isha:5};
+    <!-- Gallery Preview -->
+    <section class="gallery section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-i18n="gallery.tag">Galerie</span>
+                <h2 data-i18n="gallery.title">Eindrücke aus unserem Verein</h2>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/Moschea.jpg" alt="Gebetsraum" class="gallery-img">
+                    <div class="gallery-overlay"><span data-i18n="gallery.img1">Gebetsraum</span></div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder"><i class="fas fa-image"></i><span data-i18n="gallery.img2">Deutschkurs</span></div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder"><i class="fas fa-image"></i><span data-i18n="gallery.img3">Kinder Arabisch</span></div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder"><i class="fas fa-image"></i><span data-i18n="gallery.img4">Jumu'a Gebet</span></div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder"><i class="fas fa-image"></i><span data-i18n="gallery.img5">Ausflug</span></div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder"><i class="fas fa-image"></i><span data-i18n="gallery.img6">Tag der offenen Tür</span></div>
+                </div>
+            </div>
+            <div style="text-align:center; margin-top:40px;">
+                <a href="gallery.html" class="btn btn-primary" data-i18n="gallery.tag">Alle Fotos</a>
+            </div>
+        </div>
+    </section>
 
-let dataAll=[];
-let todayTimes=null;
-/* up dat count down iqama */
-let currentPrayer = null;
-let adhanTime = null;
-let iqamaTime = null;
+    <!-- Contact Preview -->
+    <section class="contact section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-i18n="contact.tag">Kontakt</span>
+                <h2 data-i18n="contact.title">Kontaktieren Sie uns</h2>
+                <p class="section-desc" data-i18n="contact.desc">Wir freuen uns auf Ihre Nachricht</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info" id="contactInfo">
+                    <!-- Loaded from contact-info.json -->
+                </div>
+                <div class="contact-form-wrapper">
+                    <a href="contact.html" class="btn btn-primary btn-full">
+                        <i class="fas fa-paper-plane"></i> <span data-i18n="contact.form.submit">Nachricht senden</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-/* DATA LOCALE */
-function getToday(){
-const d=new Date();
-return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
-}
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="index.html" class="footer-logo">
+                        <img src="images/LogoAssalam.jpg" alt="Assalam Logo" class="footer-logo-img">
+                        <span>Assalam</span>
+                    </a>
+                    <p data-i18n="footer.about">Assalam Görlitzer interkultureller Verein e.V. Görlitz...</p>
+                </div>
+                <div class="footer-links">
+                    <h4 data-i18n="footer.links.title">Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html" data-i18n="footer.links.about">Über uns</a></li>
+                        <li><a href="activities.html" data-i18n="footer.links.activities">Aktivitäten</a></li>
+                        <li><a href="prayer.html" data-i18n="footer.links.prayer">Gebetszeiten</a></li>
+                        <li><a href="events.html" data-i18n="footer.links.events">Veranstaltungen</a></li>
+                        <li><a href="gallery.html">Galerie</a></li>
+                        <li><a href="contact.html" data-i18n="footer.links.contact">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4 data-i18n="footer.legal.title">Rechtliches</h4>
+                    <ul>
+                        <li><a href="#" data-i18n="footer.legal.imprint">Impressum</a></li>
+                        <li><a href="#" data-i18n="footer.legal.privacy">Datenschutz</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear">2026</span> Assalam Görlitzer interkultureller Verein e.V. <span data-i18n="footer.rights">Alle Rechte vorbehalten.</span></p>
+            </div>
+        </div>
+    </footer>
 
-/* LOAD JSON */
-fetch("times_2026_gorlitz_FINAL.json")
-.then(r=>r.json())
-.then(d=>{
-dataAll=d;
-updateDay();
-});
+    <button class="back-to-top" id="backToTop" aria-label="Nach oben"><i class="fas fa-arrow-up"></i></button>
 
-/* GIORNO */
-function updateDay(){
-const today=getToday();
-todayTimes = dataAll.find(x => x.Date === today);
-
-if(!todayTimes){
-console.log("NO DATA:",today);
-return;
-}
-
-document.getElementById("table").innerHTML=`
-Fajr: ${todayTimes.Fajr}<br>
-Dhuhr: ${todayTimes.Dhuhr}<br>
-Asr: ${todayTimes.Asr}<br>
-Maghrib: ${todayTimes.Maghrib}<br>
-Isha: ${todayTimes.Isha}
-`;
-}
-
-/* TIME */
-function toDate(t){
-let [h,m]=t.split(":");
-let d=new Date();
-d.setHours(h,m,0);
-return d;
-}
-
-function getNext(){
-let now=new Date();
-let list=["Fajr","Dhuhr","Asr","Maghrib","Isha"];
-
-for(let p of list){
-let t=toDate(todayTimes[p]);
-if(t>now)return{name:p,time:t};
-}
-
-/* dopo Isha → Fajr domani */
-let t=toDate(todayTimes["Fajr"]);
-t.setDate(t.getDate()+1);
-
-return {name:"Fajr", time:t};
-}
-
-function fmt(s){
-let h=Math.floor(s/3600);
-let m=Math.floor((s%3600)/60);
-let sec=s%60;
-return `${h.toString().padStart(2,"0")}:${m.toString().padStart(2,"0")}:${sec.toString().padStart(2,"0")}`;
-}
-
-/* OVERLAY */
-function show(text){
-let o=document.getElementById("overlay");
-o.innerHTML=text;
-o.style.display="flex";
-}
-function hide(){document.getElementById("overlay").style.display="none";}
-
-/* LOOP */
-function update(){
-
-if(!todayTimes)return;
-
-let now=new Date();
-document.getElementById("clock").innerText=now.toLocaleTimeString("de-DE");
-
-let next = getNext();
-if(!next) return;
-
-/* BLOCCA LA SALAT */
-if(!currentPrayer || (iqamaTime && now > new Date(iqamaTime.getTime() + 12*60000))){
-currentPrayer = next.name;
-adhanTime = next.time;
-iqamaTime = new Date(adhanTime.getTime() + iqamaTimes[currentPrayer]*60000);
-}
-
-document.getElementById("prayer").innerText = names[currentPrayer];
-
-let diffAdhan = Math.floor((adhanTime - now)/1000);
-let diffIqama = Math.floor((iqamaTime - now)/1000);
-
-
-
-/* ADHAN 1 MIN */
-// PRIMA ADHAN
-// PRIMA ADHAN
-if(diffAdhan > 0){
-hide();
-document.getElementById("countdown").innerText = fmt(diffAdhan);
-document.getElementById("iqama").innerText = "";
-return;
-}
-
-// ADHAN (1 minuto)
-if(diffAdhan <= 0 && diffAdhan > -60){
-show("الأذان<br>ADHAN");
-return;
-}
-
-// COUNTDOWN IQAMA
-if(diffIqama > 0){
-hide();
-document.getElementById("countdown").innerText = fmt(diffIqama);
-document.getElementById("iqama").innerText = "IQAMA";
-return;
-}
-
-// IQAMA (1 minuto con simbolo)
-if(diffIqama <= 0 && diffIqama > -60){
-show("الإقامة<br>IQAMA<br>📵");
-return;
-}
-
-// SALAT (schermo nero 6 minuti)
-if(diffIqama <= -60 && diffIqama > -420){
-show("&nbsp;");
-return;
-}
-
-// DUA DOPO SALAT (5 minuti)
-if(diffIqama <= -420 && diffIqama > -720){
-show("دعاء بعد الصلاة<br>Bitte Dua machen");
-return;
-}
-
-// RESET
-hide();
-
-}
-
-setInterval(update,1000);
-
-/* HADITH */
-/* const hadithContent =
-"قال رسول الله صلى الله عليه وسلم: الصلاة نور ✦ Das Gebet ist Licht ✦ الصلاة عماد الدين ✦ ";
-
-document.getElementById("hadithText").innerText =
-hadithContent + hadithContent + hadithContent;*/
-/* ===== HADITH DA JSON ===== */
-fetch("hadith.json")
-.then(response => response.json())
-.then(data => {
-
-  // unisci testo
-  let text = data.join(" ✦ ") + " ✦ ";
-
-  // duplicazione continua (NO pause)
-  document.getElementById("hadithText").innerText =
-    text + text + text + text;
-
-})
-.catch(err => {
-  console.log("Errore hadith JSON:", err);
-});
-
-/* ===== AVVISI DA JSON ===== */
-fetch("avvisi.json")
-.then(response => response.json())
-.then(data => {
-
-  // unisci con separatore
-  let text = data.join(" ✦ ") + " ✦ ";
-
-  // duplicazione continua (NO pause)
-  document.getElementById("tickerText").innerText =
-    text + text + text + text;
-
-})
-.catch(err => {
-  console.log("Errore avvisi JSON:", err);
-});
-
-</script>
-
+    <script src="js/main.js"></script>
 </body>
 </html>
