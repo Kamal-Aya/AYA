@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>.page-content { padding-top: 100px; min-height: 100vh; }</style>
 <base target="_blank">
+<base target="_blank">
 </head>
 <body>
     <nav class="navbar" id="navbar">
@@ -22,6 +23,7 @@
                 <div class="lang-dropdown" id="langDropdown">
                     <button data-lang="de" class="active">Deutsch</button>
                     <button data-lang="en">English</button>
+                    <button data-lang="pl">Polski</button>
                     <button data-lang="ar">العربية</button>
                     <button data-lang="fa">فارسی</button>
                 </div>
@@ -46,7 +48,36 @@
                 <h2 data-i18n="activities.title">Unser Angebot</h2>
                 <p class="section-desc" data-i18n="activities.desc">Vielfältige Programme für alle Altersgruppen</p>
             </div>
+
+            <!-- AGs & Förderverträge -->
             <div class="activities-grid">
+                <div class="activity-card">
+                    <div class="activity-image"><i class="fas fa-users-cog"></i></div>
+                    <div class="activity-content">
+                        <h3 data-i18n="activities.ags.title">Arbeitsgruppen (AGs)</h3>
+                        <p class="activity-instructor"><i class="fas fa-user-tie"></i> <span data-i18n="activities.ags.leader">2 AGs im Verein geschaffen</span></p>
+                        <p data-i18n="activities.ags.text">Zwei neue Arbeitsgruppen wurden im Jahr 2025 im Verein gegründet, um verschiedene Projekte und Aktivitäten zu organisieren.</p>
+                        <ul class="activity-details">
+                            <li><i class="fas fa-check-circle"></i> <span data-i18n="activities.ags.detail1">AG Sport & Freizeit</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span data-i18n="activities.ags.detail2">AG Kultur & Bildung</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="activity-card">
+                    <div class="activity-image"><i class="fas fa-file-contract"></i></div>
+                    <div class="activity-content">
+                        <h3 data-i18n="activities.foerderung.title">Förderverträge</h3>
+                        <p class="activity-instructor"><i class="fas fa-handshake"></i> <span data-i18n="activities.foerderung.leader">Geförderte Projekte</span></p>
+                        <p data-i18n="activities.foerderung.text">Im Jahr 2025 wurden mehrere Förderverträge abgeschlossen, die unsere kulturellen und bildungspolitischen Aktivitäten unterstützen.</p>
+                        <ul class="activity-details">
+                            <li><i class="fas fa-check-circle"></i> <span data-i18n="activities.foerderung.detail1">2 Förderverträge für kulturelle Aktivitäten</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span data-i18n="activities.foerderung.detail2">1 Fördervertrag für Sprachkurse</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="activities-grid" style="margin-top: 30px;">
                 <div class="activity-card">
                     <div class="activity-image"><i class="fas fa-language"></i></div>
                     <div class="activity-content">
@@ -64,7 +95,7 @@
                     <div class="activity-content">
                         <h3 data-i18n="activities.arabic.title">Arabisch für Kinder</h3>
                         <p class="activity-instructor"><i class="fas fa-user-tie"></i> <span data-i18n="activities.arabic.leader">Leitung: Arabisch-Lehrer</span></p>
-                        <p data-i18n="activities.arabic.text">Spielerisches Arabischlernen für Kinder. Lesen, Schreiben und Grundkenntnisse der arabischen Sprache.</p>
+                        <p data-i18n="activities.arabic.text">Spielerisches Arabischlernen für Kinder. Lesen, Schreiben und Grundkenntnisse der arabischen Sprache. Abschlussfeier im August 2025.</p>
                         <ul class="activity-details">
                             <li><i class="fas fa-clock"></i> <span data-i18n="activities.arabic.time">Sa, 10:00 - 12:00</span></li>
                             <li><i class="fas fa-users"></i> <span data-i18n="activities.arabic.age">6-14 Jahre</span></li>
@@ -76,7 +107,7 @@
                     <div class="activity-content">
                         <h3 data-i18n="activities.visits.title">Besuche & Information</h3>
                         <p class="activity-instructor"><i class="fas fa-user-tie"></i> <span data-i18n="activities.visits.leader">Für Schulklassen, Vereine & Interessierte</span></p>
-                        <p data-i18n="activities.visits.text">Wir empfangen organisierte Besuche von Schulklassen, anderen Vereinen und allen, die Informationen über unsere Arbeit und den Islam suchen.</p>
+                        <p data-i18n="activities.visits.text">Wir empfangen organisierte Besuche von Schulklassen (z.B. 7. Klasse Waldorfschule), anderen Vereinen und allen, die Informationen über unsere Arbeit und den Islam suchen.</p>
                         <ul class="activity-details">
                             <li><i class="fas fa-calendar"></i> <span data-i18n="activities.visits.time">Nach Vereinbarung</span></li>
                             <li><i class="fas fa-users"></i> <span data-i18n="activities.visits.note">Alle willkommen</span></li>
@@ -88,9 +119,9 @@
                     <div class="activity-content">
                         <h3 data-i18n="activities.trips.title">Kulturelle Ausflüge</h3>
                         <p class="activity-instructor"><i class="fas fa-user-tie"></i> <span data-i18n="activities.trips.leader">Organisiert vom Verein</span></p>
-                        <p data-i18n="activities.trips.text">Besuche von Museen, historischen Stätten und kulturellen Veranstaltungen in der Region.</p>
+                        <p data-i18n="activities.trips.text">Besuche von Museen, historischen Stätten, Jump Arena, Neisse Bad und kulturellen Veranstaltungen in der Region.</p>
                         <ul class="activity-details">
-                            <li><i class="fas fa-calendar"></i> <span data-i18n="activities.trips.time">Monatlich</span></li>
+                            <li><i class="fas fa-calendar"></i> <span data-i18n="activities.trips.time">Regelmäßig</span></li>
                             <li><i class="fas fa-map-marker-alt"></i> <span data-i18n="activities.trips.location">Sachsen & Umgebung</span></li>
                         </ul>
                     </div>
@@ -100,10 +131,46 @@
                     <div class="activity-content">
                         <h3 data-i18n="activities.iftar.title">Fotor Jama3i (Gemeinschafts-Iftar)</h3>
                         <p class="activity-instructor"><i class="fas fa-user-tie"></i> <span data-i18n="activities.iftar.leader">Ramadan-Aktivität</span></p>
-                        <p data-i18n="activities.iftar.text">Gemeinschaftliches Fastenbrechen während des Ramadan. Alle sind herzlich eingeladen, gemeinsam zu essen und zu beten.</p>
+                        <p data-i18n="activities.iftar.text">Gemeinschaftliches Fastenbrechen während des Ramadan. Alle sind herzlich eingeladen, gemeinsam zu essen und zu beten. März 2025.</p>
                         <ul class="activity-details">
                             <li><i class="fas fa-clock"></i> <span data-i18n="activities.iftar.time">Während Ramadan, nach Maghrib</span></li>
                             <li><i class="fas fa-users"></i> <span data-i18n="activities.iftar.note">Alle willkommen</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="activity-card">
+                    <div class="activity-image"><i class="fas fa-futbol"></i></div>
+                    <div class="activity-content">
+                        <h3 data-i18n="activities.sport.title">Sport & Fußball</h3>
+                        <p class="activity-instructor"><i class="fas fa-user-tie"></i> <span data-i18n="activities.sport.leader">Vereinssport</span></p>
+                        <p data-i18n="activities.sport.text">Teilnahme an Hallenfußballcups und Bolzplatzturnieren in Görlitz (Königshufen, Südstadt). Weihnachtsturnier am 20.12.2025.</p>
+                        <ul class="activity-details">
+                            <li><i class="fas fa-calendar"></i> <span data-i18n="activities.sport.time">Regelmäßige Turniere</span></li>
+                            <li><i class="fas fa-users"></i> <span data-i18n="activities.sport.note">1 Mannschaft</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="activity-card">
+                    <div class="activity-image"><i class="fas fa-comments"></i></div>
+                    <div class="activity-content">
+                        <h3 data-i18n="activities.dialog.title">Interreligiöser Dialog</h3>
+                        <p class="activity-instructor"><i class="fas fa-user-tie"></i> <span data-i18n="activities.dialog.leader">Gespräch Student: Kirche - Islam</span></p>
+                        <p data-i18n="activities.dialog.text">Gespräch mit Pfarrer Naumann, Vorbereitung Gottesdienst, Gottesdienst in der Frauenkirche zum Fest der Kulturen. Herbstputz an der Lutherkirche.</p>
+                        <ul class="activity-details">
+                            <li><i class="fas fa-calendar"></i> <span data-i18n="activities.dialog.time">Ganzjährig</span></li>
+                            <li><i class="fas fa-church"></i> <span data-i18n="activities.dialog.note">Frauenkirche & Lutherkirche</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="activity-card">
+                    <div class="activity-image"><i class="fas fa-utensils"></i></div>
+                    <div class="activity-content">
+                        <h3 data-i18n="activities.kochen.title">Essen kochen</h3>
+                        <p class="activity-instructor"><i class="fas fa-user-tie"></i> <span data-i18n="activities.kochen.leader">Gemeinschaftsküche</span></p>
+                        <p data-i18n="activities.kochen.text">Gemeinsames Kochen und Essen für Veranstaltungen, Iftar und Feste. Syrischer Stand beim Fest der Kulturen und Sommerfest.</p>
+                        <ul class="activity-details">
+                            <li><i class="fas fa-calendar"></i> <span data-i18n="activities.kochen.time">Bei Veranstaltungen</span></li>
+                            <li><i class="fas fa-users"></i> <span data-i18n="activities.kochen.note">Alle willkommen</span></li>
                         </ul>
                     </div>
                 </div>
