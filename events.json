@@ -2,134 +2,535 @@
   "events": [
     {
       "id": "event1",
-      "day": "27",
-      "month": "MAY",
-      "month_de": "MAI",
-      "month_en": "MAY",
-      "month_ar": "مايو",
-      "month_fa": "مه",
+      "day": "11",
+      "month": "FEB",
+      "month_de": "FEB",
+      "month_en": "FEB",
+      "month_pl": "LUT",
+      "month_ar": "فبراير",
+      "month_fa": "فوریه",
       "title": {
-        "de": "Eid al-Adha Gebet",
-        "en": "Eid al-Adha Prayer",
-        "ar": "صلاة عيد الأضحى",
-        "fa": "نماز عید قربان"
+        "de": "Außerordentliche Mitgliederversammlung",
+        "en": "Extraordinary General Meeting",
+        "pl": "Nadzwyczajne zebranie członków",
+        "ar": "اجتماع أعضاء استثنائي",
+        "fa": "جلسه فوق العاده اعضا"
       },
       "location": {
-        "de": "Moschee Görlitz",
-        "en": "Mosque Görlitz",
-        "ar": "مسجد غورليتز",
-        "fa": "مسجد گورلیتز"
+        "de": "Vereinsräume Görlitz",
+        "en": "Association Rooms Görlitz",
+        "pl": "Siedziba stowarzyszenia Görlitz",
+        "ar": "مقر الجمعية غورليتز",
+        "fa": "مقر انجمن گورلیتز"
       },
       "text": {
-        "de": "Das erste Eid-Gebet beginnt um 06:00 Uhr, das zweite um 07:00 Uhr am Mittwoch, den 27. Mai 2026.",
-        "en": "The first Eid prayer starts at 6:00 AM and the second at 7:00 AM on Wednesday, 27 May 2026.",
-        "ar": "تبدأ صلاة العيد الأولى الساعة 06:00 والثانية الساعة 07:00 يوم الأربعاء 27 مايو 2026.",
-        "fa": "اولین نماز عید ساعت 06:00 و دومین نماز ساعت 07:00 در روز چهارشنبه 27 مه 2026 برگزار می‌شود."
+        "de": "Wahl von 2 neuen Vorstandsmitgliedern. Kamal Farousi wurde als Vorsitzender und Malek Alnajem als Stellvertreter gewählt.",
+        "en": "Election of 2 new board members. Kamal Farousi was elected as chairman and Malek Alnajem as deputy.",
+        "pl": "Wybór 2 nowych członków zarządu. Kamal Farousi został wybrany na przewodniczącego, a Malek Alnajem na zastępcę.",
+        "ar": "انتخاب عضوين جديدين في مجلس الإدارة. تم انتخاب كمال فاروسي رئيسًا ومالك الناجم نائبًا.",
+        "fa": "انتخاب ۲ عضو جدید هیئت مدیره. کمال فاروسی به عنوان رئیس و مالک الناجم به عنوان معاون انتخاب شد."
+      },
+      "tag": {
+        "de": "Verein",
+        "en": "Association",
+        "pl": "Stowarzyszenie",
+        "ar": "الجمعية",
+        "fa": "انجمن"
+      }
+    },
+    {
+      "id": "event2",
+      "day": "30",
+      "month": "MAR",
+      "month_de": "MÄR",
+      "month_en": "MAR",
+      "month_pl": "MAR",
+      "month_ar": "مارس",
+      "month_fa": "مارس",
+      "title": {
+        "de": "Gemeinsames Fastenbrechen (Iftar)",
+        "en": "Joint Iftar",
+        "pl": "Wspólne iftar",
+        "ar": "إفطار جماعي",
+        "fa": "افطاری جمعی"
+      },
+      "location": {
+        "de": "Vereinsräume Görlitz",
+        "en": "Association Rooms Görlitz",
+        "pl": "Siedziba stowarzyszenia Görlitz",
+        "ar": "مقر الجمعية غورليتز",
+        "fa": "مقر انجمن گورلیتز"
+      },
+      "text": {
+        "de": "Gemeinschaftliches Fastenbrechen während des Ramadan mit allen Mitgliedern und Gästen.",
+        "en": "Community iftar during Ramadan with all members and guests.",
+        "pl": "Wspólne iftar podczas Ramadanu ze wszystkimi członkami i gośćmi.",
+        "ar": "إفطار جماعي خلال رمضان مع جميع الأعضاء والضيوف.",
+        "fa": "افطاری جمعی در ماه رمضان با تمام اعضا و مهمانان."
       },
       "tag": {
         "de": "Religiös",
         "en": "Religious",
+        "pl": "Religijne",
         "ar": "ديني",
         "fa": "مذهبی"
       }
     },
     {
-      "id": "event2",
-      "day": "EVERY",
-      "month": "THU",
-      "month_de": "DON",
-      "month_en": "THU",
-      "month_ar": "الخميس",
-      "month_fa": "پنجشنبه",
+      "id": "event3",
+      "day": "04",
+      "month": "APR",
+      "month_de": "APR",
+      "month_en": "APR",
+      "month_pl": "KWI",
+      "month_ar": "أبريل",
+      "month_fa": "آوریل",
       "title": {
-        "de": "Deutschkurs mit Herr Andreas",
-        "en": "German Course with Mr. Andreas",
-        "ar": "دورة اللغة الألمانية مع السيد أندرياس",
-        "fa": "کلاس زبان آلمانی با آقای آندریاس"
+        "de": "Besuch 7. Klasse Waldorfschule",
+        "en": "Visit 7th Grade Waldorf School",
+        "pl": "Wizyta klasy 7. szkoły Waldorfskiej",
+        "ar": "زيارة الصف السابع مدرسة والدورف",
+        "fa": "بازدید کلاس هفتم مدرسه والدورف"
       },
       "location": {
         "de": "Vereinsräume Görlitz",
         "en": "Association Rooms Görlitz",
+        "pl": "Siedziba stowarzyszenia Görlitz",
         "ar": "مقر الجمعية غورليتز",
         "fa": "مقر انجمن گورلیتز"
       },
       "text": {
-        "de": "Der Deutschkurs mit Herr Andreas findet jeden Donnerstag nach dem Maghreb-Gebet statt.",
-        "en": "The German course with Mr. Andreas takes place every Thursday after Maghreb prayer.",
-        "ar": "تقام دورة اللغة الألمانية مع السيد أندرياس كل يوم خميس بعد صلاة المغرب.",
-        "fa": "کلاس زبان آلمانی با آقای آندریاس هر پنجشنبه بعد از نماز مغرب برگزار می‌شود."
+        "de": "Schulklasse der Waldorfschule besucht den Assalam Verein zum interkulturellen Austausch.",
+        "en": "Waldorf school class visits the Assalam association for intercultural exchange.",
+        "pl": "Klasa szkoły Waldorfskiej odwiedza stowarzyszenie Assalam w celu wymiany międzykulturowej.",
+        "ar": "تزور فصل مدرسة والدورف جمعية السلام للتبادل الثقافي.",
+        "fa": "کلاس مدرسه والدورف از انجمن السلام برای تبادل فرهنگی بازدید می‌کند."
       },
       "tag": {
         "de": "Bildung",
         "en": "Education",
+        "pl": "Edukacja",
         "ar": "تعليم",
         "fa": "آموزشی"
       }
     },
     {
-      "id": "event3",
-      "day": "DAILY",
-      "month": "ALL",
-      "month_de": "TÄGLICH",
-      "month_en": "DAILY",
-      "month_ar": "يوميًا",
-      "month_fa": "روزانه",
+      "id": "event4",
+      "day": "24",
+      "month": "MAY",
+      "month_de": "MAI",
+      "month_en": "MAY",
+      "month_pl": "MAJ",
+      "month_ar": "مايو",
+      "month_fa": "مه",
       "title": {
-        "de": "Quranlesung",
-        "en": "Quran Reading",
-        "ar": "قراءة القرآن",
-        "fa": "قرائت قرآن"
+        "de": "Hallenfußballcup (1 Mannschaft)",
+        "en": "Indoor Football Cup (1 Team)",
+        "pl": "Turniej piłki nożnej halowej (1 drużyna)",
+        "ar": "كأس كرة القدم الصالات (فريق واحد)",
+        "fa": "جام فوتبال سالنی (۱ تیم)"
+      },
+      "location": {
+        "de": "Königshufen Görlitz",
+        "en": "Königshufen Görlitz",
+        "pl": "Königshufen Görlitz",
+        "ar": "كونيغشوفن غورليتز",
+        "fa": "کونیگشوفن گورلیتز"
+      },
+      "text": {
+        "de": "Teilnahme am Hallenfußballcup mit einer Mannschaft in Königshufen.",
+        "en": "Participation in the indoor football cup with one team in Königshufen.",
+        "pl": "Udział w turnieju piłki nożnej halowej z jedną drużyną w Königshufen.",
+        "ar": "المشاركة في كأس كرة القدم الصالات مع فريق واحد في كونيغشوفن.",
+        "fa": "شرکت در جام فوتبال سالنی با یک تیم در کونیگشوفن."
+      },
+      "tag": {
+        "de": "Sport",
+        "en": "Sports",
+        "pl": "Sport",
+        "ar": "رياضة",
+        "fa": "ورزشی"
+      }
+    },
+    {
+      "id": "event5",
+      "day": "06",
+      "month": "JUN",
+      "month_de": "JUN",
+      "month_en": "JUN",
+      "month_pl": "CZE",
+      "month_ar": "يونيو",
+      "month_fa": "ژوئن",
+      "title": {
+        "de": "Opferfest Eid al-Adha",
+        "en": "Eid al-Adha (Feast of Sacrifice)",
+        "pl": "Święto Ofiarowania Eid al-Adha",
+        "ar": "عيد الأضحى",
+        "fa": "عید قربان"
       },
       "location": {
         "de": "Moschee Görlitz",
         "en": "Mosque Görlitz",
+        "pl": "Meczet Görlitz",
         "ar": "مسجد غورليتز",
         "fa": "مسجد گورلیتز"
       },
       "text": {
-        "de": "Tägliche Quranlesung zwischen dem Maghreb- und Isha-Gebet.",
-        "en": "Daily Quran reading between Maghreb and Isha prayers.",
-        "ar": "قراءة يومية للقرآن بين صلاتي المغرب والعشاء.",
-        "fa": "قرائت روزانه قرآن بین نماز مغرب و عشاء برگزار می‌شود."
+        "de": "Feier des Opferfestes Eid al-Adha mit Gebet und Gemeinschaftsfeier.",
+        "en": "Celebration of Eid al-Adha with prayer and community celebration.",
+        "pl": "Obchody święta Eid al-Adha z modlitwą i uroczystością wspólnotową.",
+        "ar": "احتفال عيد الأضحى بالصلاة والاحتفال الجماعي.",
+        "fa": "جشن عید قربان با نماز و جشن جمعی."
       },
       "tag": {
         "de": "Religiös",
         "en": "Religious",
+        "pl": "Religijne",
         "ar": "ديني",
         "fa": "مذهبی"
       }
     },
-     {
-    "id": "event4",
-  "day": "EVERY",
-  "month": "WED",
-  "month_de": "MIT",
-  "month_en": "WED",
-  "month_ar": "الأربعاء",
-  "month_fa": "چهارشنبه",
-  "title": {
-    "de": "Frauentreff in Rāprica",
-    "en": "Women's Meeting in Rāprica",
-    "ar": "لقاء النساء في رابريكا",
-    "fa": "دیدار بانوان در راپریکا"
-  },
-  "location": {
-    "de": "Rāprica",
-    "en": "Rāprica",
-    "ar": "رابريكا",
-    "fa": "راپریکا"
-  },
-  "text": {
-    "de": "Frauentreffen jeden Mittwoch um 17:00 Uhr an wechselnden Orten in Rāprica.",
-    "en": "Women's meeting every Wednesday at 5:00 PM in different places in Rāprica.",
-    "ar": "لقاء النساء كل يوم أربعاء الساعة 17:00 في أماكن مختلفة في رابريكا.",
-    "fa": "دیدار بانوان هر چهارشنبه ساعت 17:00 در مکان‌های مختلف راپریکا برگزار می‌شود."
-  },
-  "tag": {
-    "de": "Frauen",
-    "en": "Women",
-    "ar": "نساء",
-    "fa": "بانوان"
-  } } 
+    {
+      "id": "event6",
+      "day": "08",
+      "month": "JUN",
+      "month_de": "JUN",
+      "month_en": "JUN",
+      "month_pl": "CZE",
+      "month_ar": "يونيو",
+      "month_fa": "ژوئن",
+      "title": {
+        "de": "Familienfest Sachsenhütte",
+        "en": "Family Festival Sachsenhütte",
+        "pl": "Festyn rodzinny Sachsenhütte",
+        "ar": "مهرجان عائلي ساكسنهوته",
+        "fa": "جشن خانوادگی زاکسنهوته"
+      },
+      "location": {
+        "de": "Sachsenhütte",
+        "en": "Sachsenhütte",
+        "pl": "Sachsenhütte",
+        "ar": "ساكسنهوته",
+        "fa": "زاکسنهوته"
+      },
+      "text": {
+        "de": "Familiennachmittag in der Sachsenhütte mit Grillen, Spielen und Gemeinschaft.",
+        "en": "Family afternoon at Sachsenhütte with barbecue, games and community.",
+        "pl": "Popołudnie rodzinne w Sachsenhütte z grillem, zabawami i wspólnotą.",
+        "ar": "بعد ظهر عائلي في ساكسنهوته مع الشواء والألعاب والمجتمع.",
+        "fa": "بعدازظهر خانوادگی در زاکسنهوته با کباب، بازی و جمع."
+      },
+      "tag": {
+        "de": "Familie",
+        "en": "Family",
+        "pl": "Rodzina",
+        "ar": "عائلي",
+        "fa": "خانوادگی"
+      }
+    },
+    {
+      "id": "event7",
+      "day": "14",
+      "month": "JUN",
+      "month_de": "JUN",
+      "month_en": "JUN",
+      "month_pl": "CZE",
+      "month_ar": "يونيو",
+      "month_fa": "ژوئن",
+      "title": {
+        "de": "Fest der Kulturen im Stadtpark",
+        "en": "Festival of Cultures in the City Park",
+        "pl": "Festiwal Kultur w parku miejskim",
+        "ar": "مهرجان الثقافات في حديقة المدينة",
+        "fa": "جشن فرهنگ‌ها در پارک شهر"
+      },
+      "location": {
+        "de": "Stadtpark Görlitz",
+        "en": "City Park Görlitz",
+        "pl": "Park miejski Görlitz",
+        "ar": "حديقة المدينة غورليتز",
+        "fa": "پارک شهر گورلیتز"
+      },
+      "text": {
+        "de": "Teilnahme am Fest der Kulturen im Stadtpark Görlitz mit syrischer Küche und Information.",
+        "en": "Participation in the Festival of Cultures in Görlitz city park with Syrian cuisine and information.",
+        "pl": "Udział w Festiwalu Kultur w parku miejskim Görlitz z kuchnią syryjską i informacją.",
+        "ar": "المشاركة في مهرجان الثقافات في حديقة المدينة غورليتز مع المطبخ السوري والمعلومات.",
+        "fa": "شرکت در جشن فرهنگ‌ها در پارک شهر گورلیتز با آشپزی سوری و اطلاعات."
+      },
+      "tag": {
+        "de": "Kultur",
+        "en": "Culture",
+        "pl": "Kultura",
+        "ar": "ثقافة",
+        "fa": "فرهنگ"
+      }
+    },
+    {
+      "id": "event8",
+      "day": "15",
+      "month": "JUN",
+      "month_de": "JUN",
+      "month_en": "JUN",
+      "month_pl": "CZE",
+      "month_ar": "يونيو",
+      "month_fa": "ژوئن",
+      "title": {
+        "de": "Gottesdienst Frauenkirche zum Fest der Kulturen",
+        "en": "Church Service Frauenkirche for Festival of Cultures",
+        "pl": "Nabożeństwo w kościele Frauenkirche na Festiwal Kultur",
+        "ar": "الخدمة الكنسية في كنيسة فراونكيرشه لمهرجان الثقافات",
+        "fa": "مراسم کلیسای فراونکیرشه برای جشن فرهنگ‌ها"
+      },
+      "location": {
+        "de": "Frauenkirche Görlitz",
+        "en": "Frauenkirche Görlitz",
+        "pl": "Kościół Frauenkirche Görlitz",
+        "ar": "كنيسة فراونكيرشه غورليتز",
+        "fa": "کلیسای فراونکیرشه گورلیتز"
+      },
+      "text": {
+        "de": "Ökumenischer Gottesdienst in der Frauenkirche im Rahmen des Festes der Kulturen.",
+        "en": "Ecumenical church service in the Frauenkirche as part of the Festival of Cultures.",
+        "pl": "Ekumeniczne nabożeństwo w kościele Frauenkirche w ramach Festiwalu Kultur.",
+        "ar": "خدمة كنيسية إ cumenical في كنيسة فراونكيرشه ضمن مهرجان الثقافات.",
+        "fa": "مراسم کلیسایی اکومنیکال در فراونکیرشه به عنوان بخشی از جشن فرهنگ‌ها."
+      },
+      "tag": {
+        "de": "Interreligiös",
+        "en": "Interfaith",
+        "pl": "Międzywyznaniowe",
+        "ar": "بين الأديان",
+        "fa": "بین‌ادمانی"
+      }
+    },
+    {
+      "id": "event9",
+      "day": "24",
+      "month": "AUG",
+      "month_de": "AUG",
+      "month_en": "AUG",
+      "month_pl": "SIE",
+      "month_ar": "أغسطس",
+      "month_fa": "آگوست",
+      "title": {
+        "de": "Sommerfest der evang. Innenstadtgemeinde",
+        "en": "Summer Festival of the Evangelical City Center Parish",
+        "pl": "Festyn letni ewangelickiej parafii śródmiejskiej",
+        "ar": "مهرجان الصيف لجماعة المدينة الإنجيلية",
+        "fa": "جشن تابستانی جماعت انجیلی مرکز شهر"
+      },
+      "location": {
+        "de": "Innenstadtkirche Görlitz",
+        "en": "City Center Church Görlitz",
+        "pl": "Kościół śródmiejski Görlitz",
+        "ar": "كنيسة وسط المدينة غورليتز",
+        "fa": "کلیسای مرکز شهر گورلیتز"
+      },
+      "text": {
+        "de": "Teilnahme am Sommerfest der evangelischen Innenstadtgemeinde mit syrischer Küche.",
+        "en": "Participation in the summer festival of the evangelical city center parish with Syrian cuisine.",
+        "pl": "Udział w festynie letnim ewangelickiej parafii śródmiejskiej z kuchnią syryjską.",
+        "ar": "المشاركة في مهرجان الصيف لجماعة المدينة الإنجيلية مع المطبخ السوري.",
+        "fa": "شرکت در جشن تابستانی جماعت انجیلی مرکز شهر با آشپزی سوری."
+      },
+      "tag": {
+        "de": "Kultur",
+        "en": "Culture",
+        "pl": "Kultura",
+        "ar": "ثقافة",
+        "fa": "فرهنگ"
+      }
+    },
+    {
+      "id": "event10",
+      "day": "08",
+      "month": "NOV",
+      "month_de": "NOV",
+      "month_en": "NOV",
+      "month_pl": "LIS",
+      "month_ar": "نوفمبر",
+      "month_fa": "نوامبر",
+      "title": {
+        "de": "Herbstputz an der Lutherkirche",
+        "en": "Autumn Cleaning at Luther Church",
+        "pl": "Jesienne sprzątanie przy kościele Luterańskim",
+        "ar": "تنظيف الخريف في كنيسة لوثر",
+        "fa": "تمیزکاری پاییزی در کلیسای لوتر"
+      },
+      "location": {
+        "de": "Lutherkirche Görlitz",
+        "en": "Luther Church Görlitz",
+        "pl": "Kościół Luterański Görlitz",
+        "ar": "كنيسة لوثر غورليتز",
+        "fa": "کلیسای لوتر گورلیتز"
+      },
+      "text": {
+        "de": "Gemeinsamer Herbstputz an der Lutherkirche als ehrenamtliche Aktion.",
+        "en": "Joint autumn cleaning at Luther Church as a voluntary action.",
+        "pl": "Wspólne jesienne sprzątanie przy kościele Luterańskim jako akcja wolontariacka.",
+        "ar": "تنظيف الخريف المشترك في كنيسة لوثر كعمل تطوعي.",
+        "fa": "تمیزکاری پاییزی مشترک در کلیسای لوتر به عنوان اقدام داوطلبانه."
+      },
+      "tag": {
+        "de": "Ehrenamt",
+        "en": "Volunteering",
+        "pl": "Wolontariat",
+        "ar": "تطوع",
+        "fa": "داوطلبانه"
+      }
+    },
+    {
+      "id": "event11",
+      "day": "20",
+      "month": "DEC",
+      "month_de": "DEZ",
+      "month_en": "DEC",
+      "month_pl": "GRU",
+      "month_ar": "ديسمبر",
+      "month_fa": "دسامبر",
+      "title": {
+        "de": "Hallenfußballturnier Königshufen",
+        "en": "Indoor Football Tournament Königshufen",
+        "pl": "Turniej piłki nożnej halowej Königshufen",
+        "ar": "بطولة كرة القدم الصالات كونيغشوفن",
+        "fa": "تورنمنت فوتبال سالنی کونیگشوفن"
+      },
+      "location": {
+        "de": "Königshufen Görlitz",
+        "en": "Königshufen Görlitz",
+        "pl": "Königshufen Görlitz",
+        "ar": "كونيغشوفن غورليتز",
+        "fa": "کونیگشوفن گورلیتز"
+      },
+      "text": {
+        "de": "Teilnahme am Hallenfußballturnier in Königshufen.",
+        "en": "Participation in the indoor football tournament in Königshufen.",
+        "pl": "Udział w turnieju piłki nożnej halowej w Königshufen.",
+        "ar": "المشاركة في بطولة كرة القدم الصالات في كونيغشوفن.",
+        "fa": "شرکت در تورنمنت فوتبال سالنی در کونیگشوفن."
+      },
+      "tag": {
+        "de": "Sport",
+        "en": "Sports",
+        "pl": "Sport",
+        "ar": "رياضة",
+        "fa": "ورزشی"
+      }
+    },
+    {
+      "id": "event12",
+      "day": "27",
+      "month": "DEC",
+      "month_de": "DEZ",
+      "month_en": "DEC",
+      "month_pl": "GRU",
+      "month_ar": "ديسمبر",
+      "month_fa": "دسامبر",
+      "title": {
+        "de": "Kinobesuch mit Kindern",
+        "en": "Cinema Visit with Children",
+        "pl": "Wizyta w kinie z dziećmi",
+        "ar": "زيارة السينما مع الأطفال",
+        "fa": "بازدید سینما با کودکان"
+      },
+      "location": {
+        "de": "Kino Görlitz",
+        "en": "Cinema Görlitz",
+        "pl": "Kino Görlitz",
+        "ar": "سينما غورليتز",
+        "fa": "سینمای گورلیتز"
+      },
+      "text": {
+        "de": "Kinobesuch mit den Kindern des Vereins.",
+        "en": "Cinema visit with the children of the association.",
+        "pl": "Wizyta w kinie z dziećmi stowarzyszenia.",
+        "ar": "زيارة السينما مع أطفال الجمعية.",
+        "fa": "بازدید سینما با کودکان انجمن."
+      },
+      "tag": {
+        "de": "Familie",
+        "en": "Family",
+        "pl": "Rodzina",
+        "ar": "عائلي",
+        "fa": "خانوادگی"
+      }
+    },
+    {
+      "id": "event13",
+      "day": "29",
+      "month": "DEC",
+      "month_de": "DEZ",
+      "month_en": "DEC",
+      "month_pl": "GRU",
+      "month_ar": "ديسمبر",
+      "month_fa": "دسامبر",
+      "title": {
+        "de": "Besuch Jump Arena",
+        "en": "Visit Jump Arena",
+        "pl": "Wizyta w Jump Arena",
+        "ar": "زيارة جامب أرينا",
+        "fa": "بازدید جامپ آرنا"
+      },
+      "location": {
+        "de": "Jump Arena Görlitz",
+        "en": "Jump Arena Görlitz",
+        "pl": "Jump Arena Görlitz",
+        "ar": "جامب أرينا غورليتز",
+        "fa": "جامپ آرنا گورلیتز"
+      },
+      "text": {
+        "de": "Ausflug mit den Kindern in die Jump Arena.",
+        "en": "Trip with the children to the Jump Arena.",
+        "pl": "Wycieczka z dziećmi do Jump Arena.",
+        "ar": "رحلة مع الأطفال إلى جامب أرينا.",
+        "fa": "سفر با کودکان به جامپ آرنا."
+      },
+      "tag": {
+        "de": "Familie",
+        "en": "Family",
+        "pl": "Rodzina",
+        "ar": "عائلي",
+        "fa": "خانوادگی"
+      }
+    },
+    {
+      "id": "event14",
+      "day": "30",
+      "month": "DEC",
+      "month_de": "DEZ",
+      "month_en": "DEC",
+      "month_pl": "GRU",
+      "month_ar": "ديسمبر",
+      "month_fa": "دسامبر",
+      "title": {
+        "de": "Besuch Neisse Bad",
+        "en": "Visit Neisse Bath",
+        "pl": "Wizyta w Neisse Bad",
+        "ar": "زيارة نايس باد",
+        "fa": "بازدید نایس باد"
+      },
+      "location": {
+        "de": "Neisse Bad Görlitz",
+        "en": "Neisse Bath Görlitz",
+        "pl": "Neisse Bad Görlitz",
+        "ar": "نايس باد غورليتز",
+        "fa": "نایس باد گورلیتز"
+      },
+      "text": {
+        "de": "Ausflug mit den Kindern ins Neisse Bad.",
+        "en": "Trip with the children to Neisse Bath.",
+        "pl": "Wycieczka z dziećmi do Neisse Bad.",
+        "ar": "رحلة مع الأطفال إلى نايس باد.",
+        "fa": "سفر با کودکان به نایس باد."
+      },
+      "tag": {
+        "de": "Familie",
+        "en": "Family",
+        "pl": "Rodzina",
+        "ar": "عائلي",
+        "fa": "خانوادگی"
+      }
+    }
   ]
 }
