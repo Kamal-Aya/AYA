@@ -1,101 +1,180 @@
 {
-  "gebete": [
+  "vorstand": [
     {
-      "file": "jumua.jpg",
-      "title_de": "Jumu'a Gebet",
-      "title_en": "Friday Prayer",
-      "title_ar": "صلاة الجمعة",
-      "title_fa": "نماز جمعه"
-    },
-    {
-      "file": "tarawih.jpg",
-      "title_de": "Tarawih Gebet",
-      "title_en": "Tarawih Prayer",
-      "title_ar": "صلاة التراويح",
-      "title_fa": "نماز تراویح"
-    },
-    {
-      "file": "eid-al-fitr.jpg",
-      "title_de": "Eid al-Fitr Gebet",
-      "title_en": "Eid al-Fitr Prayer",
-      "title_ar": "صلاة عيد الفطر",
-      "title_fa": "نماز عید فطر"
-    },
-    {
-      "file": "eid-al-adha.jpg",
-      "title_de": "Eid al-Adha Gebet",
-      "title_en": "Eid al-Adha Prayer",
-      "title_ar": "صلاة عيد الأضحى",
-      "title_fa": "نماز عید قربان"
+      "file": "vorstand-wahl-2025.jpg",
+      "title_de": "Wahl des neuen Vorstands 2025",
+      "title_en": "Election of the new board 2025",
+      "title_pl": "Wybór nowego zarządu 2025",
+      "title_ar": "انتخاب مجلس الإدارة الجديد 2025",
+      "title_fa": "انتخاب هیئت مدیره جدید 2025"
     }
   ],
   "aktivitaeten": [
     {
-      "file": "deutschkurs.jpg",
-      "title_de": "Deutschkurs",
-      "title_en": "German Course",
-      "title_ar": "دورة الألمانية",
-      "title_fa": "کلاس آلمانی"
+      "file": "fastenbrechen-2025.jpg",
+      "title_de": "Gemeinsames Fastenbrechen März 2025",
+      "title_en": "Joint Iftar March 2025",
+      "title_pl": "Wspólne iftar marzec 2025",
+      "title_ar": "إفطار جماعي مارس 2025",
+      "title_fa": "افطاری جمعی مارس 2025"
     },
     {
-      "file": "arabisch-kinder.jpg",
-      "title_de": "Arabisch für Kinder",
-      "title_en": "Arabic for Kids",
-      "title_ar": "العربية للأطفال",
-      "title_fa": "عربی برای کودکان"
+      "file": "waldorfschule-besuch.jpg",
+      "title_de": "Besuch Waldorfschule 04.04.2025",
+      "title_en": "Waldorf School Visit 04.04.2025",
+      "title_pl": "Wizyta szkoły Waldorfskiej 04.04.2025",
+      "title_ar": "زيارة مدرسة والدورف 04.04.2025",
+      "title_fa": "بازدید مدرسه والدورف 04.04.2025"
     },
     {
-      "file": "integrationskurs.jpg",
-      "title_de": "Integrationskurs",
-      "title_en": "Integration Course",
-      "title_ar": "دورة الاندماج",
-      "title_fa": "دوره ادغام"
+      "file": "fussball-koenigshufen.jpg",
+      "title_de": "Hallenfußballcup Königshufen 24.05.2025",
+      "title_en": "Indoor Football Cup Königshufen 24.05.2025",
+      "title_pl": "Turniej piłki nożnej halowej Königshufen 24.05.2025",
+      "title_ar": "كأس كرة القدم الصالات كونيغشوفن 24.05.2025",
+      "title_fa": "جام فوتبال سالنی کونیگشوفن 24.05.2025"
+    },
+    {
+      "file": "familienfest-sachsenhuette.jpg",
+      "title_de": "Familienfest Sachsenhütte 08.06.2025",
+      "title_en": "Family Festival Sachsenhütte 08.06.2025",
+      "title_pl": "Festyn rodzinny Sachsenhütte 08.06.2025",
+      "title_ar": "مهرجان عائلي ساكسنهوته 08.06.2025",
+      "title_fa": "جشن خانوادگی زاکسنهوته 08.06.2025"
+    },
+    {
+      "file": "fest-der-kulturen.jpg",
+      "title_de": "Fest der Kulturen Stadtpark 14.06.2025",
+      "title_en": "Festival of Cultures City Park 14.06.2025",
+      "title_pl": "Festiwal Kultur park miejski 14.06.2025",
+      "title_ar": "مهرجان الثقافات حديقة المدينة 14.06.2025",
+      "title_fa": "جشن فرهنگ‌ها پارک شهر 14.06.2025"
+    },
+    {
+      "file": "gottesdienst-frauenkirche.jpg",
+      "title_de": "Gottesdienst Frauenkirche 15.06.2025",
+      "title_en": "Church Service Frauenkirche 15.06.2025",
+      "title_pl": "Nabożeństwo Frauenkirche 15.06.2025",
+      "title_ar": "الخدمة الكنسية فراونكيرشه 15.06.2025",
+      "title_fa": "مراسم کلیسای فراونکیرشه 15.06.2025"
+    },
+    {
+      "file": "arabisch-abschluss.jpg",
+      "title_de": "Abschluss Arabisch Kurs für Kinder August 2025",
+      "title_en": "Arabic Course Graduation for Kids August 2025",
+      "title_pl": "Zakończenie kursu arabskiego dla dzieci sierpień 2025",
+      "title_ar": "تخرج دورة العربية للأطفال أغسطس 2025",
+      "title_fa": "فراغت از دوره عربی برای کودکان آگوست 2025"
+    },
+    {
+      "file": "sommerfest-innenstadt.jpg",
+      "title_de": "Sommerfest evang. Innenstadtgemeinde 24.08.2025",
+      "title_en": "Summer Festival Evangelical City Parish 24.08.2025",
+      "title_pl": "Festyn letni ewangelickiej parafii śródmiejskiej 24.08.2025",
+      "title_ar": "مهرجان الصيف لجماعة المدينة الإنجيلية 24.08.2025",
+      "title_fa": "جشن تابستانی جماعت انجیلی مرکز شهر 24.08.2025"
+    },
+    {
+      "file": "herbstputz-lutherkirche.jpg",
+      "title_de": "Herbstputz Lutherkirche 08.11.2025",
+      "title_en": "Autumn Cleaning Luther Church 08.11.2025",
+      "title_pl": "Jesienne sprzątanie kościół Luterański 08.11.2025",
+      "title_ar": "تنظيف الخريف كنيسة لوثر 08.11.2025",
+      "title_fa": "تمیزکاری پاییزی کلیسای لوتر 08.11.2025"
+    },
+    {
+      "file": "weihnachtsturnier.jpg",
+      "title_de": "Weihnachtsturnier Königshufen 20.12.2025",
+      "title_en": "Christmas Tournament Königshufen 20.12.2025",
+      "title_pl": "Turniej świąteczny Königshufen 20.12.2025",
+      "title_ar": "بطولة عيد الميلاد كونيغشوفن 20.12.2025",
+      "title_fa": "تورنمنت کریسمس کونیگشوفن 20.12.2025"
+    },
+    {
+      "file": "kinobesuch-kinder.jpg",
+      "title_de": "Kinobesuch mit Kindern 27.12.2025",
+      "title_en": "Cinema Visit with Children 27.12.2025",
+      "title_pl": "Wizyta w kinie z dziećmi 27.12.2025",
+      "title_ar": "زيارة السينما مع الأطفال 27.12.2025",
+      "title_fa": "بازدید سینما با کودکان 27.12.2025"
+    },
+    {
+      "file": "jump-arena.jpg",
+      "title_de": "Besuch Jump Arena 29.12.2025",
+      "title_en": "Visit Jump Arena 29.12.2025",
+      "title_pl": "Wizyta Jump Arena 29.12.2025",
+      "title_ar": "زيارة جامب أرينا 29.12.2025",
+      "title_fa": "بازدید جامپ آرنا 29.12.2025"
+    },
+    {
+      "file": "neisse-bad.jpg",
+      "title_de": "Besuch Neisse Bad 30.12.2025",
+      "title_en": "Visit Neisse Bath 30.12.2025",
+      "title_pl": "Wizyta Neisse Bad 30.12.2025",
+      "title_ar": "زيارة نايس باد 30.12.2025",
+      "title_fa": "بازدید نایس باد 30.12.2025"
+    }
+  ],
+  "gebete": [
+    {
+      "file": "eid-al-adha-2025.jpg",
+      "title_de": "Eid al-Adha Gebet 06.06.2025",
+      "title_en": "Eid al-Adha Prayer 06.06.2025",
+      "title_pl": "Modlitwa Eid al-Adha 06.06.2025",
+      "title_ar": "صلاة عيد الأضحى 06.06.2025",
+      "title_fa": "نماز عید قربان 06.06.2025"
+    },
+    {
+      "file": "freitagsgebete.jpg",
+      "title_de": "Freitagsgebete (Jumu'a)",
+      "title_en": "Friday Prayers (Jumu'a)",
+      "title_pl": "Modlitwy piątkowe (Jumu'a)",
+      "title_ar": "صلوات الجمعة",
+      "title_fa": "نمازهای جمعه"
     }
   ],
   "ausfluege": [
     {
-      "file": "dresden.jpg",
-      "title_de": "Ausflug Dresden",
-      "title_en": "Dresden Trip",
-      "title_ar": "رحلة دريسدن",
-      "title_fa": "سفر درسدن"
-    },
-    {
-      "file": "berlin.jpg",
-      "title_de": "Berlin Trip",
-      "title_en": "Berlin Trip",
-      "title_ar": "رحلة برلين",
-      "title_fa": "سفر برلین"
-    },
-    {
-      "file": "museumsbesuch.jpg",
-      "title_de": "Museumsbesuch",
-      "title_en": "Museum Visit",
-      "title_ar": "زيارة المتحف",
-      "title_fa": "بازدید موزه"
+      "file": "willibue.jpg",
+      "title_de": "Willibü Ausflug",
+      "title_en": "Willibü Trip",
+      "title_pl": "Wycieczka Willibü",
+      "title_ar": "رحلة فيليبو",
+      "title_fa": "سفر ویلیبو"
     }
   ],
-  "events": [
+  "allgemein": [
     {
-      "file": "tag-der-offenen-tuer.jpg",
-      "title_de": "Tag der offenen Tür",
-      "title_en": "Open Day",
-      "title_ar": "يوم الباب المفتوح",
-      "title_fa": "روز درهای باز"
+      "file": "beratungen.jpg",
+      "title_de": "Beratungen",
+      "title_en": "Consultations",
+      "title_pl": "Porady",
+      "title_ar": "الاستشارات",
+      "title_fa": "مشاوره‌ها"
     },
     {
-      "file": "eid-feier.jpg",
-      "title_de": "Eid Feier",
-      "title_en": "Eid Celebration",
-      "title_ar": "احتفال العيد",
-      "title_fa": "جشن عید"
+      "file": "trauerfeier.jpg",
+      "title_de": "Trauerfeier",
+      "title_en": "Funeral Service",
+      "title_pl": "Uroczystość pogrzebowa",
+      "title_ar": "مراسم العزاء",
+      "title_fa": "مراسم ختم"
     },
     {
-      "file": "herbstfest.jpg",
-      "title_de": "Herbstfest",
-      "title_en": "Autumn Festival",
-      "title_ar": "مهرجان الخريف",
-      "title_fa": "جشن پاییز"
+      "file": "deutschkurse.jpg",
+      "title_de": "Deutschkurse",
+      "title_en": "German Courses",
+      "title_pl": "Kursy niemieckiego",
+      "title_ar": "دورات الألمانية",
+      "title_fa": "کلاس‌های آلمانی"
+    },
+    {
+      "file": "essen-kochen.jpg",
+      "title_de": "Essen kochen",
+      "title_en": "Cooking",
+      "title_pl": "Gotowanie",
+      "title_ar": "طهي الطعام",
+      "title_fa": "آشپزی"
     }
   ],
   "ramadan": [
@@ -103,6 +182,7 @@
       "file": "iftar-gemeinschaft.jpg",
       "title_de": "Iftar Gemeinschaft",
       "title_en": "Iftar Community",
+      "title_pl": "Wspólne iftar",
       "title_ar": "إفتر جماعي",
       "title_fa": "افطاری جمعی"
     },
@@ -110,52 +190,9 @@
       "file": "iftar-tisch.jpg",
       "title_de": "Iftar Tisch",
       "title_en": "Iftar Table",
+      "title_pl": "Stół iftar",
       "title_ar": "مائدة الإفطار",
       "title_fa": "سفره افطار"
-    },
-    {
-      "file": "ramadan-dekoration.jpg",
-      "title_de": "Ramadan Dekoration",
-      "title_en": "Ramadan Decoration",
-      "title_ar": "زينة رمضان",
-      "title_fa": "تزیینات رمضان"
-    },
-    {
-      "file": "suhur-gemeinschaft.jpg",
-      "title_de": "Suhur Gemeinschaft",
-      "title_en": "Suhur Community",
-      "title_ar": "سحور جماعي",
-      "title_fa": "سحری جمعی"
-    },
-    {
-      "file": "quran-lesung.jpg",
-      "title_de": "Quran Lesung",
-      "title_en": "Quran Reading",
-      "title_ar": "قراءة القرآن",
-      "title_fa": "قرائت قرآن"
-    },
-    {
-      "file": "laylat-al-qadr.jpg",
-      "title_de": "Laylat al-Qadr",
-      "title_en": "Laylat al-Qadr",
-      "title_ar": "ليلة القدر",
-      "title_fa": "شب قدر"
-    }
-  ],
-  "allgemein": [
-    {
-      "file": "vorstand.jpg",
-      "title_de": "Vorstand",
-      "title_en": "Board",
-      "title_ar": "مجلس الإدارة",
-      "title_fa": "هیئت مدیره"
-    },
-    {
-      "file": "gemeinde.jpg",
-      "title_de": "Gemeinde",
-      "title_en": "Community",
-      "title_ar": "المجتمع",
-      "title_fa": "جامعه"
     }
   ]
 }
