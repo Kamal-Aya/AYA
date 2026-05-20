@@ -29,9 +29,11 @@
                 <div class="lang-dropdown" id="langDropdown">
                     <button data-lang="de" class="active">Deutsch</button>
                     <button data-lang="en">English</button>
+                    <button data-lang="pl">Polski</button>
                     <button data-lang="ar">العربية</button>
                     <button data-lang="fa">فارسی</button>
-                </div>
+                     
+              </div>
             </div>
 
             <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen">
@@ -110,28 +112,53 @@
     </section>
 
     <!-- Stats Section -->
-    <section class="stats">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <span class="stat-number" data-target="150">0</span>
-                    <span class="stat-label" data-i18n="stats.members">Mitglieder</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number" data-target="12">0</span>
-                    <span class="stat-label" data-i18n="stats.years">Jahre Erfahrung</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number" data-target="8">0</span>
-                    <span class="stat-label" data-i18n="stats.activities">Aktivitäten pro Woche</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number" data-target="500">0</span>
-                    <span class="stat-label" data-i18n="stats.visitors">Besucher pro Jahr</span>
+  <!-- Donation Section -->
+<section class="donation" id="donation">
+    <div class="container">
+        <div class="section-header" style="margin-bottom: 40px;">
+            <span class="section-tag" style="background: rgba(255,255,255,0.2); color: white;" data-i18n="donation.tag">Spende</span>
+            <h2 data-i18n="donation.title">Unterstützen Sie uns</h2>
+            <p class="section-desc" style="color: rgba(255,255,255,0.9);" data-i18n="donation.desc">Ihre Spende hilft uns, unsere Arbeit fortzusetzen</p>
+        </div>
+        <div class="donation-content">
+            <div class="donation-details" id="donationDetails">
+                <ul style="list-style: none; padding: 0; margin: 0;">
+                    <li>
+                        <i class="fas fa-university"></i>
+                        <div>
+                            <span class="label" data-i18n="donation.iban_label">IBAN</span>
+                            <span class="value" id="donationIban">--</span>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-code"></i>
+                        <div>
+                            <span class="label" data-i18n="donation.bic_label">BIC</span>
+                            <span class="value" id="donationBic">--</span>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-landmark"></i>
+                        <div>
+                            <span class="label" data-i18n="donation.bank_label">Bank</span>
+                            <span class="value" id="donationBank">--</span>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-user"></i>
+                        <div>
+                            <span class="label" data-i18n="donation.holder_label">Kontoinhaber</span>
+                            <span class="value" id="donationHolder">--</span>
+                        </div>
+                    </li>
+                </ul>
+                <div class="donation-note">
+                    <i class="fas fa-info-circle"></i> <span data-i18n="donation.note">Jede Spende ist steuerlich absetzbar. Wir stellen gerne eine Spendenbescheinigung aus.</span>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Activities Preview -->
     <section class="activities section-padding bg-light">
