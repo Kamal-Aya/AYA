@@ -3,6 +3,21 @@
    Modern, Responsive Website Styles
    Multilingual: DE / EN / AR / FA
    ======================================== */
+/* Nascondi menu mobile di default */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none !important;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(-100%);
+    }
+    .nav-menu.active {
+        display: flex !important;
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0);
+    }
+}
 
 /* CSS Variables */
 :root {
