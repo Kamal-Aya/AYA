@@ -18,7 +18,6 @@
         transform: translateX(0);
     }
 }
-
 /* CSS Variables */
 :root {
     --primary: #1a5f2a;
@@ -1534,6 +1533,273 @@ body.lang-fa .form-group textarea {
 }
 
 /* ========================================
+   DONATION SECTION (replaces stats)
+   ======================================== */
+/* ========================================
+   DONATION SECTION - UPDATED
+   ======================================== */
+.donation {
+    background: linear-gradient(135deg, #1a5f2a 0%, #2d8a4e 100%);
+    padding: 80px 0;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.donation::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.donation .section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.donation .section-tag {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    color: #ffd700;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255,215,0,0.3);
+}
+
+.donation h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    color: white;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.donation .section-desc {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+    color: rgba(255,255,255,0.9);
+}
+
+.donation-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.donation-details {
+    background: rgba(255,255,255,0.08);
+    border-radius: 20px;
+    padding: 40px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.15);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+}
+
+.donation-details ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.donation-details li {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+    transition: all 0.3s ease;
+}
+
+.donation-details li:last-of-type {
+    border-bottom: none;
+}
+
+.donation-details li:hover {
+    background: none;        /* Rimuovi sfondo hover */
+    margin: 0;               /* Reset margin */
+    padding: 20px 0;         /* Mantieni padding normale */
+    border-radius: 0;        /* Rimuovi bordo arrotondato */
+}
+
+.donation-details i {
+    color: #ffd700;
+    font-size: 1.6rem;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,215,0,0.15);
+    border-radius: 12px;
+    flex-shrink: 0;
+    margin-top: 5px;
+}
+
+.donation-details .label {
+    display: block;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.donation-details .value {
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: white;
+    font-family: 'Courier New', monospace;
+    letter-spacing: 1px;
+}
+
+.donation-note {
+    margin-top: 30px;
+    padding: 20px;
+    background: rgba(255,215,0,0.1);
+    border-radius: 12px;
+    border-left: 4px solid #ffd700;
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.9);
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.donation-note i {
+    color: #ffd700;
+    font-size: 1.3rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+[dir="rtl"] .donation-details li {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .donation-note {
+    border-left: none;
+    border-right: 4px solid #ffd700;
+}
+
+@media (max-width: 768px) {
+    .donation { padding: 50px 0; }
+    .donation h2 { font-size: 2rem; }
+    .donation-details { padding: 25px; margin: 0 15px; }
+    .donation-details li { gap: 15px; padding: 15px 0; }
+    .donation-details i { font-size: 1.3rem; width: 40px; height: 40px; }
+    .donation-details .value { font-size: 1rem; }
+}
+   .donation {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+    padding: 80px 0;
+    color: white;
+}
+
+.donation-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.donation-icon {
+    font-size: 3rem;
+    color: var(--secondary);
+    margin-bottom: 20px;
+}
+
+.donation h2 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.donation > .container > p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.donation-details {
+    background: rgba(255,255,255,0.1);
+    border-radius: var(--radius-lg);
+    padding: 40px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.donation-details li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.donation-details li:last-child {
+    margin-bottom: 0;
+}
+
+.donation-details i {
+    color: #ffd700;
+    font-size: 1.6rem;
+    width: auto;
+    height: auto;
+    display: inline-block;
+    background: none;        /* Rimuovi sfondo */
+    border-radius: 0;        /* Rimuovi bordo arrotondato */
+    flex-shrink: 0;
+    margin-top: 5px;
+}
+
+.donation-details .label {
+    display: block;
+    font-size: 0.85rem;
+    opacity: 0.8;
+    margin-bottom: 3px;
+}
+
+.donation-details .value {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: monospace;
+}
+
+.donation-note {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+[dir="rtl"] .donation-details li {
+    flex-direction: row-reverse;
+}
+
+@media (max-width: 768px) {
+    .donation-details {
+        padding: 25px;
+    }
+    .donation h2 {
+        font-size: 1.8rem;
+    }
+}
+/* ========================================
    VERWALTUNGSHILFE CARD (from JSON)
    ======================================== */
 #versteltung-card {
@@ -1592,4 +1858,227 @@ body.lang-en .hijri-date {
 .prayer-time-item.current .prayer-time {
     color: var(--primary-dark);
     font-weight: 700;
+}
+
+/* ========================================
+   HERO - PROFESSIONAL BACKGROUND
+   ======================================== */
+/* ========================================
+   HERO - DESIGN PROFESSIONALE 2026
+   ======================================== */
+
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-image: url('../images/verein-assalam.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Overlay scuro elegante - molto trasparente */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.30) 0%,
+        rgba(0, 0, 0, 0.50) 50%,
+        rgba(0, 0, 0, 0.70) 100%
+    );
+    z-index: 1;
+}
+
+/* Pattern geometrico islamico sottile */
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    z-index: 2;
+    opacity: 0.5;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 3;
+}
+
+.hero-content {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Titolo grande e professionale */
+.hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.8rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 25px;
+    text-shadow: 0 4px 30px rgba(0,0,0,0.4);
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+}
+
+/* Sottotitolo dorato con linee decorative */
+.hero-subtitle {
+    font-size: 1.3rem;
+    color: #d4af37;
+    font-weight: 500;
+    letter-spacing: 4px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+}
+
+.hero-subtitle::before,
+.hero-subtitle::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 60px;
+    height: 1px;
+    background: rgba(212, 175, 55, 0.5);
+}
+
+.hero-subtitle::before {
+    right: calc(100% + 20px);
+}
+
+.hero-subtitle::after {
+    left: calc(100% + 20px);
+}
+
+/* Descrizione */
+.hero-description {
+    font-size: 1.25rem;
+    color: rgba(255,255,255,0.85);
+    line-height: 1.8;
+    margin-bottom: 50px;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 300;
+}
+
+/* Bottoni eleganti */
+.hero-buttons {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.hero-buttons .btn-primary {
+    background: transparent;
+    color: white;
+    padding: 16px 45px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    border: 2px solid #d4af37;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Effetto shine al hover */
+.hero-buttons .btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.hero-buttons .btn-primary:hover::before {
+    left: 100%;
+}
+
+.hero-buttons .btn-primary:hover {
+    background: #d4af37;
+    color: #1a1a1a;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 40px rgba(212, 175, 55, 0.3);
+}
+
+.hero-buttons .btn-secondary {
+    background: rgba(255,255,255,0.1);
+    color: white;
+    padding: 16px 45px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    border: 2px solid rgba(255,255,255,0.3);
+    transition: all 0.4s ease;
+    backdrop-filter: blur(10px);
+}
+
+.hero-buttons .btn-secondary:hover {
+    background: rgba(255,255,255,0.2);
+    border-color: rgba(255,255,255,0.5);
+    transform: translateY(-3px);
+}
+
+/* Scroll indicator */
+.scroll-indicator {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    animation: bounce 2s infinite;
+}
+
+.scroll-indicator i {
+    color: rgba(255,255,255,0.6);
+    font-size: 1.5rem;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+    40% { transform: translateX(-50%) translateY(-15px); }
+    60% { transform: translateX(-50%) translateY(-8px); }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.4rem;
+    }
+    .hero-subtitle {
+        font-size: 1rem;
+        letter-spacing: 2px;
+    }
+    .hero-subtitle::before,
+    .hero-subtitle::after {
+        width: 30px;
+    }
+    .hero-description {
+        font-size: 1rem;
+    }
+    .hero-buttons .btn-primary,
+    .hero-buttons .btn-secondary {
+        padding: 14px 35px;
+        font-size: 1rem;
+    }
 }
