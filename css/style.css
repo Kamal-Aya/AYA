@@ -1866,7 +1866,6 @@ body.lang-en .hijri-date {
 /* ========================================
    HERO - DESIGN PROFESSIONALE 2026
    ======================================== */
-
 .hero {
     position: relative;
     min-height: 100vh;
@@ -1878,8 +1877,16 @@ body.lang-en .hijri-date {
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: scroll;  /* scroll invece di fixed */
 }
+
+/* Su schermi più grandi (laptop/desktop) riattiva fixed per l'effetto parallax */
+@media (min-width: 769px) {
+    .hero {
+        background-attachment: fixed;
+    }
+}
+
 
 /* Overlay scuro elegante - molto trasparente */
 .hero::before {
